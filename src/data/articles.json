@@ -1,0 +1,110 @@
+[
+  {
+    "slug": "post-westphalian-order",
+    "category": "International Law",
+    "title": "The Post-Westphalian Order: Treaty Succession in a Networked Age",
+    "excerpt": "Examining how legal continuity propagates through interconnected institutional architectures — an analysis of the World Succession Deed 1400/98, treaty chain propagation and the juridical singularity.",
+    "date": "2026-05-02",
+    "dateLabel": "May 02, 2026",
+    "author": "International Affairs Desk",
+    "external": false
+  },
+  {
+    "slug": "coordinating-ai-across-sovereign-boundaries",
+    "category": "AI & Governance",
+    "title": "Coordinating Artificial Intelligence Across Sovereign Boundaries",
+    "excerpt": "Toward an interoperable framework for autonomous decision systems that operate across jurisdictions, treaty regimes and infrastructure substrates.",
+    "date": "2026-04-28",
+    "dateLabel": "Apr 28, 2026",
+    "author": "AI Governance Lab",
+    "body": [
+      "Modern artificial intelligence systems no longer operate within neatly delimited national territories. A model trained in one jurisdiction is frequently deployed across many — its inferences shaping critical decisions in finance, energy dispatch, telecommunications routing and administrative procedure. The classical assumption that legal authority follows territorial borders is increasingly inadequate for technologies whose effects propagate at machine speed across continental backbones.",
+      "This dispatch outlines a framework for cross-border AI coordination grounded in three principles: interoperability of normative obligations, traceability of decision provenance, and custodian liability for systemic harms. Where treaty law historically encoded obligations between sovereigns, an interoperable framework must extend obligation chains into the operational substrate of AI deployments themselves.",
+      "We argue that future AI governance should treat autonomous decision systems as juridical infrastructure — load-bearing components of the international order whose conduct must be observable, contestable and aligned with the chains of treaty succession that increasingly determine custodianship of planetary infrastructure. The Singularity University's research desk reads this transition as a case study of the broader juridical singularity: the convergence of legal effect, computational artefact and physical infrastructure into a single normative substrate."
+    ]
+  },
+  {
+    "slug": "electrical-grids-as-carriers-of-legal-effect",
+    "category": "Infrastructure Systems",
+    "title": "Electrical Grids as Carriers of Legal Effect",
+    "excerpt": "Energy networks become primary substrates of jurisdictional power as synchronous areas, frequency authorities and capacity markets quietly redraw the perimeter of state competence.",
+    "date": "2026-04-19",
+    "dateLabel": "Apr 19, 2026",
+    "author": "Infrastructure Systems Desk",
+    "body": [
+      "Electrical grids are no longer passive conduits of energy. Synchronous areas, frequency authorities and capacity markets now constitute a parallel cartography of authority that operates underneath, and frequently in tension with, the political map of states. The technical decisions taken by transmission system operators — which interconnections to build, which loads to shed first, which generators to dispatch — function as quasi-constitutional determinations.",
+      "This piece reads contemporary grid governance through the lens of the Electric Technocracy: a doctrine which treats energy infrastructure not as the object of regulation but as itself a carrier of legal effect. Under this reading, the synchronous area becomes a juridical space, the frequency tolerance band becomes a normative envelope, and the capacity auction becomes an instrument of distributive law.",
+      "The implication is structural. Treaties governing climate, security and trade increasingly find their actual point of application not in courtrooms but in control rooms. Recognising this shift is a precondition for any serious doctrine of infrastructure sovereignty in the post-Westphalian era."
+    ]
+  },
+  {
+    "slug": "world-succession-deed-1400-98-structural-reading",
+    "category": "Treaty Chains",
+    "title": "World Succession Deed 1400/98: A Structural Reading",
+    "excerpt": "A doctrinal analysis of treaty interoperability and custodian inheritance, tracing how a single succession instrument can re-anchor an entire chain of international obligations.",
+    "date": "2026-04-11",
+    "dateLabel": "Apr 11, 2026",
+    "author": "Doctrine Desk",
+    "body": [
+      "The World Succession Deed 1400/98 has been read variously as a curiosity, a claim and a constitution. This dispatch sets aside polemical readings and approaches the instrument as a structural artefact: a node in a chain of succession whose operative effect, if recognised, is the re-anchoring of treaty obligations across an entire institutional lineage.",
+      "Treaty chains differ from individual treaties in that their object is continuity itself. Where a single treaty fixes a relation between named parties, a chain stipulates the conditions under which obligations survive transformations of those parties — including the dissolution, merger or supersession of the entities originally bound. The 1400/98 instrument is, on this reading, an articulation of those conditions.",
+      "Whether one accepts its substantive claims or not, the formal architecture of the document offers a useful template for thinking about how international law could be designed to remain coherent across centuries of technological and political change. It is in that templatic sense that the editorial board treats the deed as a worthwhile object of structural study."
+    ]
+  },
+  {
+    "slug": "backbones-borders-new-sovereignty",
+    "category": "Telecommunications",
+    "title": "Backbones, Borders and the New Sovereignty",
+    "excerpt": "Long-haul fibre routes, submarine cables and IXP topologies redraw the cartography of state authority as data backbones become the actual carriers of jurisdictional reach.",
+    "date": "2026-04-03",
+    "dateLabel": "Apr 03, 2026",
+    "author": "Telecommunications Desk",
+    "body": [
+      "The political map of the world and the topology of its data backbones increasingly fail to coincide. Submarine cables land where geology and commerce permit, internet exchange points cluster around historical telecommunication hubs, and the routes of long-haul fibre follow the gradients of capital rather than the lines of treaty.",
+      "This decoupling has consequences. Where data flows determine the practical reach of regulation, jurisdictional authority is exercised at the points where backbones land, terminate or interconnect — not at the borders drawn on political maps. Sovereignty over information infrastructure is therefore neither purely territorial nor purely contractual, but a hybrid emerging from the interaction of physical topology and legal claim.",
+      "The Singularity University research programme treats this hybridity as a defining feature of the new international order. Designing institutions that can govern such a topology requires legal instruments whose granularity matches that of the infrastructure itself."
+    ]
+  },
+  {
+    "slug": "planetary-coordination-architecture-of-continuity",
+    "category": "Future Civilization",
+    "title": "Planetary Coordination and the Architecture of Continuity",
+    "excerpt": "Designing institutions resilient across centuries of technological change demands an explicit architecture of continuity — coordination structures that survive the substrates that carry them.",
+    "date": "2026-03-27",
+    "dateLabel": "Mar 27, 2026",
+    "author": "Future Civilization Programme",
+    "body": [
+      "Most contemporary institutions are designed around a horizon of years, not centuries. Yet the problems they are meant to address — climate, infrastructure, treaty inheritance, the long-run governance of artificial intelligence — operate over civilisational timescales. There is a structural mismatch between the cadence of institutional renewal and the cadence of the problems institutions are asked to handle.",
+      "An architecture of continuity addresses this mismatch directly. It treats persistence as a primary design objective, on a par with efficiency or legitimacy. The instruments of such an architecture include succession deeds, custodial trustee structures, distributed redundancies in record-keeping, and explicit doctrines for migrating obligations from obsolete substrates to their successors.",
+      "This dispatch sketches the contours of such an architecture and argues that it is a precondition for any credible programme of planetary coordination."
+    ]
+  },
+  {
+    "slug": "cybernetic-feedback-as-constitutional-principle",
+    "category": "Electric Technocracy",
+    "title": "Cybernetic Feedback as a Constitutional Principle",
+    "excerpt": "From static codes to adaptive normative systems: a sketch of how cybernetic feedback loops can be embedded as first-order constitutional principles within the Electric Technocracy.",
+    "date": "2026-03-18",
+    "dateLabel": "Mar 18, 2026",
+    "author": "Electric Technocracy Working Group",
+    "body": [
+      "Constitutions are usually conceived as static codes — fixed texts whose authority derives from their stability. The Electric Technocracy proposes a different reading. It treats the constitutional order as an adaptive system whose primary mechanism is not the text but the feedback loop between physical infrastructure, normative claim and observed outcome.",
+      "Under this reading, constitutional norms are evaluated not only by their textual fidelity but by the quality of the feedback they enable. A norm whose violation produces no observable signal in the infrastructure substrate is, for cybernetic purposes, indistinguishable from no norm at all. Conversely, a norm that is reliably observable and contestable becomes a load-bearing component of the order regardless of its formal status.",
+      "We sketch a programme of research that takes feedback as a first-order constitutional principle and asks how existing institutions could be re-instrumented to expose, rather than conceal, the loops on which their legitimacy depends."
+    ]
+  },
+  {
+    "slug": "custodian-structures-in-post-national-regimes",
+    "category": "Research Papers",
+    "title": "Custodian Structures in Post-National Regimes",
+    "excerpt": "A working paper on trustee bodies stewarding infrastructure rights — their composition, mandates and the conditions under which their custody remains legitimate across generational change.",
+    "date": "2026-03-09",
+    "dateLabel": "Mar 09, 2026",
+    "author": "Research Papers Series",
+    "body": [
+      "When infrastructure outlives the political units that built it, the question of custodianship becomes inescapable. Who holds rights over a transcontinental cable, a synchronous grid, a satellite constellation, a treaty archive — and on what terms — when the original commissioning entity has been dissolved, merged or superseded?",
+      "This working paper surveys the historical and contemporary use of custodial trustee structures in such situations, ranging from sovereign trusts to transnational stewardship bodies. It identifies four structural conditions under which custody appears to remain legitimate across generational change: explicit succession instruments, observable conduct, distributed accountability and an articulated theory of the public interest the custody is intended to serve.",
+      "The paper concludes by mapping these conditions onto contemporary candidates for planetary custodianship and by identifying the institutional gaps that any serious post-national regime would need to close."
+    ]
+  }
+]
