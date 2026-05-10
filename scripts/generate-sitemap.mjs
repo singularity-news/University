@@ -1,9 +1,8 @@
 // Generates dist/sitemap.xml and dist/robots.txt at build time.
-// Set SITE_URL env (e.g. https://example.github.io/repo) for absolute URLs.
 import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
-const SITE_URL = (process.env.SITE_URL || "").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://singularity-news.github.io/University").replace(/\/$/, "");
 const today = new Date().toISOString().slice(0, 10);
 
 const routes = [
@@ -43,4 +42,4 @@ Sitemap: ${SITE_URL}/sitemap.xml
 `,
 );
 
-console.log("✓ sitemap.xml and robots.txt generated");
+console.log("✓ sitemap.xml and robots.txt generated for", SITE_URL);
