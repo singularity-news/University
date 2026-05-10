@@ -18,6 +18,16 @@
     <meta name="twitter:description" content="The Architecture of Future Civilization. Juridical Singularity, Electric Technocracy, AI Governance." />
   </head>
   <body>
+    <script>
+      // Restore deep-link path from GitHub Pages 404.html SPA fallback
+      (function () {
+        var m = window.location.search.match(/[?&]p=([^&]+)/);
+        if (m) {
+          var path = decodeURIComponent(m[1]);
+          window.history.replaceState(null, "", path || "/");
+        }
+      })();
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
