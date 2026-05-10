@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { Rss, ExternalLink } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
+import { TECH_NEWS, TECH_NEWS_GENERATED_AT } from "@/data/tech-news.generated";
 
 const categories = [
   "All",
@@ -25,6 +27,12 @@ const articles = [
   { c: "Research Papers", t: "Custodian Structures in Post-National Regimes", e: "A working paper on trustee bodies stewarding infrastructure rights.", d: "Mar 09, 2026" },
 ];
 
+const formatDate = (s: string) => {
+  const t = Date.parse(s);
+  if (!t) return "";
+  return new Date(t).toLocaleDateString("en-US", { year: "numeric", month: "short", day: "2-digit" });
+};
+
 export const News = () => {
   const [active, setActive] = useState("All");
   const filtered = active === "All" ? articles : articles.filter((a) => a.c === active);
@@ -37,7 +45,7 @@ export const News = () => {
           description="Open access publications from the university's editorial board, research desks and policy laboratory."
         />
 
-        <div className="flex flex-wrap gap-2 mb-10">
+        <div className="flex flex-wrap items-center gap-2 mb-10">
           {categories.map((c) => (
             <button
               key={c}
@@ -51,6 +59,13 @@ export const News = () => {
               {c}
             </button>
           ))}
+          <a
+            href="/rss.xml"
+            className="ml-auto inline-flex items-center gap-2 text-xs tracking-wider uppercase px-3.5 py-1.5 rounded-full border border-accent/60 text-accent hover:bg-accent/10 transition-all"
+            aria-label="Subscribe to RSS feed"
+          >
+            <Rss className="h-3.5 w-3.5" /> Subscribe RSS
+          </a>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -87,6 +102,48 @@ export const News = () => {
             );
           })}
         </div>
+
+        {TECH_NEWS.length > 0 && (
+          <div className="mt-24">
+            <SectionHeader
+              eyebrow="Syndicated · Technology Wire"
+              title="Global Technology Dispatches"
+              description="Auto-aggregated from leading English technology publications via RSS. Refreshed on every deployment."
+            />
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {TECH_NEWS.map((a) => (
+                <a
+                  key={a.link}
+                  href={a.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="card-hover group rounded-xl border border-border bg-card/50 backdrop-blur overflow-hidden flex flex-col p-6"
+                >
+                  <div className="flex items-center justify-between mb-3 text-[10px] tracking-[0.2em] uppercase">
+                    <span className="text-accent">{a.source}</span>
+                    <span className="text-muted-foreground">{formatDate(a.pubDate)}</span>
+                  </div>
+                  <h3 className="text-base font-semibold mb-3 group-hover:text-primary transition-colors leading-snug">
+                    {a.title}
+                  </h3>
+                  {a.description && (
+                    <p className="text-sm text-muted-foreground leading-relaxed flex-1">{a.description}</p>
+                  )}
+                  <div className="mt-5 inline-flex items-center gap-1.5 text-xs tracking-[0.2em] uppercase text-primary">
+                    Read source <ExternalLink className="h-3 w-3" />
+                  </div>
+                </a>
+              ))}
+            </div>
+
+            {TECH_NEWS_GENERATED_AT && (
+              <div className="mt-8 text-[11px] tracking-[0.18em] uppercase text-muted-foreground">
+                Wire updated · {new Date(TECH_NEWS_GENERATED_AT).toUTCString()}
+              </div>
+            )}
+          </div>
+        )}
       </div>
     </section>
   );

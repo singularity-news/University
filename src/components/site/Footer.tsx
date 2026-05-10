@@ -19,7 +19,7 @@ export const Footer = () => (
 
         {[
           { h: "Institution", l: ["About", "Doctrine", "Research Fields", "Editorial Board"] },
-          { h: "Publications", l: ["Public News", "Research Papers", "Working Drafts", "Archive"] },
+          { h: "Publications", l: ["Public News", "Research Papers", "Working Drafts", "RSS Feed"] },
           { h: "Legal", l: ["Imprint", "Disclaimer", "Privacy Notice", "Editorial Policy"] },
         ].map((col) => (
           <div key={col.h}>
