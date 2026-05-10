@@ -77,7 +77,7 @@ const PostWestphalianOrder = () => {
       <article className="relative pt-32 pb-24">
         <div className="container max-w-3xl">
           <Link
-            to="/#news"
+            to="/news.html"
             className="inline-flex items-center gap-2 text-xs tracking-[0.2em] uppercase text-muted-foreground hover:text-primary transition-colors mb-10"
           >
             <ArrowLeft className="h-3.5 w-3.5" /> Back to News Portal

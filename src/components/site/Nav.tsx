@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#juridical", label: "Juridical Singularity" },
-  { href: "#technocracy", label: "Electric Technocracy" },
-  { href: "#research", label: "Research" },
-  { href: "#news", label: "News" },
+  { href: "/#about", label: "About" },
+  { href: "/#juridical", label: "Juridical Singularity" },
+  { href: "/#technocracy", label: "Electric Technocracy" },
+  { href: "/#research", label: "Research" },
+  { href: "/news.html", label: "News", route: true },
 ];
 
 export const Nav = () => {
@@ -37,18 +38,29 @@ export const Nav = () => {
         </a>
 
         <nav className="hidden lg:flex items-center gap-8">
-          {links.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
-            >
-              {l.label}
-              <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-accent group-hover:w-full transition-all duration-300" />
-            </a>
-          ))}
+          {links.map((l) =>
+            l.route ? (
+              <Link
+                key={l.href}
+                to={l.href.replace(/^\//, "/")}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-accent group-hover:w-full transition-all duration-300" />
+              </Link>
+            ) : (
+              <a
+                key={l.href}
+                href={l.href}
+                className="text-sm text-muted-foreground hover:text-foreground transition-colors relative group"
+              >
+                {l.label}
+                <span className="absolute -bottom-1 left-0 w-0 h-px bg-gradient-accent group-hover:w-full transition-all duration-300" />
+              </a>
+            ),
+          )}
           <a
-            href="#cta"
+            href="/#cta"
             className="text-sm px-4 py-2 rounded-md border border-primary/50 text-foreground hover:bg-primary/10 hover:shadow-[0_0_24px_hsl(var(--primary)/0.4)] transition-all"
           >
             Join the Frontier
@@ -67,16 +79,27 @@ export const Nav = () => {
       {open && (
         <div className="lg:hidden border-t border-border/60 bg-background/95 backdrop-blur-xl">
           <nav className="container py-6 flex flex-col gap-4">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="text-base text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {l.label}
-              </a>
-            ))}
+            {links.map((l) =>
+              l.route ? (
+                <Link
+                  key={l.href}
+                  to={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {l.label}
+                </Link>
+              ) : (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  onClick={() => setOpen(false)}
+                  className="text-base text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {l.label}
+                </a>
+              ),
+            )}
           </nav>
         </div>
       )}
