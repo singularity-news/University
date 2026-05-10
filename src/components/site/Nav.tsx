@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "#about", label: "About" },
-  { href: "#juridical", label: "Juridical Singularity" },
-  { href: "#technocracy", label: "Electric Technocracy" },
-  { href: "#research", label: "Research" },
-  { href: "#news", label: "News" },
+  { href: "/#about", label: "About" },
+  { href: "/#juridical", label: "Juridical Singularity" },
+  { href: "/#technocracy", label: "Electric Technocracy" },
+  { href: "/#research", label: "Research" },
+  { href: "/news.html", label: "News", route: true },
 ];
 
 export const Nav = () => {
