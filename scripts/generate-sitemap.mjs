@@ -1,26 +1,23 @@
 // Generates dist/sitemap.xml, dist/robots.txt and dist/rss.xml at build time
 // using absolute URLs so search engines and feed readers resolve them correctly.
-import { writeFileSync, mkdirSync, existsSync } from "node:fs";
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
 const SITE_URL = (process.env.SITE_URL || "https://singularity-news.github.io/University").replace(/\/$/, "");
 const today = new Date().toISOString().slice(0, 10);
 const nowRfc822 = new Date().toUTCString();
 
+const articles = JSON.parse(readFileSync(resolve("src/data/articles.json"), "utf8"));
+
 const routes = [
   { loc: "/", priority: "1.0", changefreq: "weekly" },
-  { loc: "/news/post-westphalian-order.html", priority: "0.8", changefreq: "monthly", lastmod: "2026-05-02" },
-];
-
-const articles = [
-  {
-    title: "The Post-Westphalian Order: Treaty Succession in a Networked Age",
-    link: "/news/post-westphalian-order.html",
-    description:
-      "Examining how legal continuity propagates through interconnected institutional architectures.",
-    pubDate: new Date("2026-05-02").toUTCString(),
-    category: "International Law",
-  },
+  { loc: "/news.html", priority: "0.9", changefreq: "daily" },
+  ...articles.map((a) => ({
+    loc: `/news/${a.slug}.html`,
+    priority: "0.8",
+    changefreq: "monthly",
+    lastmod: a.date,
+  })),
 ];
 
 const dist = resolve("dist");
@@ -58,34 +55,54 @@ Sitemap: ${SITE_URL}/sitemap.xml
 const xmlEscape = (s = "") =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;").replace(/'/g, "&apos;");
 
+const cdata = (s = "") => `<![CDATA[${String(s).replace(/\]\]>/g, "]]]]><![CDATA[>")}]]>`;
+
 const rssItems = articles
-  .map(
-    (a) => `    <item>
+  .map((a) => {
+    const link = `${SITE_URL}/news/${a.slug}.html`;
+    const pubDate = new Date(a.date).toUTCString();
+    const fullText = (a.body || []).join("\n\n").trim();
+    const richDescription = fullText ? `${a.excerpt}\n\n${fullText}` : a.excerpt;
+    const snippet = a.excerpt;
+    return `    <item>
       <title>${xmlEscape(a.title)}</title>
-      <link>${SITE_URL}${a.link}</link>
-      <guid isPermaLink="true">${SITE_URL}${a.link}</guid>
-      <pubDate>${a.pubDate}</pubDate>
+      <link>${link}</link>
+      <guid isPermaLink="true">${link}</guid>
+      <pubDate>${pubDate}</pubDate>
       <category>${xmlEscape(a.category)}</category>
-      <description>${xmlEscape(a.description)}</description>
-    </item>`,
-  )
+      <dc:creator>${xmlEscape(`Singularity University — ${a.author}`)}</dc:creator>
+      <description>${cdata(snippet)}</description>
+      <content:encoded>${cdata(
+        `<p><strong>${a.title}</strong></p><p>${snippet}</p>${(a.body || [])
+          .map((p) => `<p>${p}</p>`)
+          .join("")}`,
+      )}</content:encoded>
+    </item>`;
+  })
   .join("\n");
 
 writeFileSync(
   resolve(dist, "rss.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+     xmlns:atom="http://www.w3.org/2005/Atom"
+     xmlns:content="http://purl.org/rss/1.0/modules/content/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
   <channel>
     <title>Singularity University · Public News Portal</title>
-    <link>${SITE_URL}/</link>
+    <link>${SITE_URL}/news.html</link>
     <atom:link href="${SITE_URL}/rss.xml" rel="self" type="application/rss+xml" />
-    <description>Editorial, research and dispatches from Singularity University KdK Krzb. — Juridical Singularity, Electric Technocracy, AI Governance.</description>
+    <description>Editorial, research and dispatches from Singularity University KdK Krzb. — Juridical Singularity, Electric Technocracy, AI Governance, infrastructure sovereignty and treaty systems.</description>
     <language>en</language>
+    <copyright>© ${new Date().getFullYear()} Singularity University · KdK Krzb.</copyright>
     <lastBuildDate>${nowRfc822}</lastBuildDate>
+    <ttl>60</ttl>
 ${rssItems}
   </channel>
 </rss>
 `,
 );
 
-console.log("✓ sitemap.xml, robots.txt and rss.xml generated for", SITE_URL);
+console.log(
+  `✓ sitemap.xml (${routes.length} urls), robots.txt and rss.xml (${articles.length} items) generated for ${SITE_URL}`,
+);
