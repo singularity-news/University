@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Singularity University</title>
+    <script>
+      // GitHub Pages SPA fallback: rewrite path into a query string,
+      // which index.html restores via History API.
+      (function () {
+        var l = window.location;
+        var path = l.pathname.replace(/\/$/, "") + l.search + l.hash;
+        l.replace(l.origin + "/?p=" + encodeURIComponent(path));
+      })();
+    </script>
+  </head>
+  <body></body>
+</html>
