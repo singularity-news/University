@@ -21,10 +21,6 @@ const NewsArticle = () => {
   const cleanSlug = (slug || "").replace(/\.html$/, "");
   const article = articlesData.find((a) => a.slug === cleanSlug);
 
-  // Dedicated rich page for the flagship article
-  if (cleanSlug === "post-westphalian-order") {
-    return <Navigate to="/news/post-westphalian-order.html" replace />;
-  }
 
   useEffect(() => {
     if (!article) return;
