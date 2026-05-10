@@ -7,7 +7,6 @@ const links = [
   { href: "#technocracy", label: "Electric Technocracy" },
   { href: "#research", label: "Research" },
   { href: "#news", label: "News" },
-  { href: "#campus", label: "Campus" },
 ];
 
 export const Nav = () => {
