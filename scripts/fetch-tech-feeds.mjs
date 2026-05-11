@@ -1,8 +1,13 @@
 // Fetches English technology RSS feeds at build time and writes
 // src/data/tech-news.generated.ts so all article texts are bundled
 // directly into the SPA (immediate load, fully crawlable).
-import { writeFileSync, mkdirSync, existsSync } from "node:fs";
+//
+// CI-safe: never throws. Individual feed failures are logged but do
+// NOT fail the build. If ALL feeds fail, a previous generated file
+// is preserved (fallback) so the build keeps going.
+import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { resolve, dirname } from "node:path";
+
 
 const FEEDS = [
   { url: "https://www.wired.com/feed/rss", source: "WIRED" },
@@ -83,31 +88,64 @@ const parseItems = (xml) => {
   return out;
 };
 
-const fetchFeed = async (feed) => {
+const RETRIES = 2;
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+const fetchOnce = async (feed) => {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const ctrl = new AbortController();
-    const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
     const res = await fetch(feed.url, {
       signal: ctrl.signal,
-      headers: { "User-Agent": "SingularityUniversity-FeedFetcher/1.0", Accept: "application/rss+xml,application/xml,text/xml,*/*" },
+      redirect: "follow",
+      headers: {
+        "User-Agent": "Mozilla/5.0 (compatible; SingularityUniversity-FeedFetcher/1.1; +https://singularity-news.github.io/kdk-university/)",
+        Accept: "application/rss+xml,application/atom+xml,application/xml;q=0.9,text/xml;q=0.8,*/*;q=0.5",
+      },
     });
+    if (!res.ok) throw new Error(`HTTP ${res.status} ${res.statusText}`);
+    return await res.text();
+  } finally {
     clearTimeout(t);
-    if (!res.ok) throw new Error(`HTTP ${res.status}`);
-    const xml = await res.text();
-    return parseItems(xml).map((i) => ({ ...i, source: feed.source }));
-  } catch (err) {
-    console.warn(`! feed failed: ${feed.source} (${feed.url}) — ${err.message}`);
-    return [];
   }
 };
 
-const all = (await Promise.all(FEEDS.map(fetchFeed))).flat();
-all.sort((a, b) => {
-  const da = Date.parse(a.pubDate) || 0;
-  const db = Date.parse(b.pubDate) || 0;
-  return db - da;
-});
+const fetchFeed = async (feed) => {
+  const started = Date.now();
+  for (let attempt = 1; attempt <= RETRIES + 1; attempt++) {
+    try {
+      const xml = await fetchOnce(feed);
+      const items = parseItems(xml).map((i) => ({ ...i, source: feed.source }));
+      console.log(`✓ ${feed.source.padEnd(22)} ${String(items.length).padStart(2)} items  (${Date.now() - started}ms, attempt ${attempt})`);
+      return { ok: true, items, source: feed.source };
+    } catch (err) {
+      const last = attempt === RETRIES + 1;
+      console.warn(`${last ? "✗" : "↻"} ${feed.source.padEnd(22)} attempt ${attempt}/${RETRIES + 1} failed — ${err.message}`);
+      if (last) return { ok: false, items: [], source: feed.source, error: err.message };
+      await sleep(500 * attempt);
+    }
+  }
+  return { ok: false, items: [], source: feed.source };
+};
+
+console.log(`→ fetching ${FEEDS.length} RSS feeds (timeout ${TIMEOUT_MS}ms, ${RETRIES} retries)…`);
+const results = await Promise.all(FEEDS.map(fetchFeed));
+const ok = results.filter((r) => r.ok).length;
+const failed = results.filter((r) => !r.ok);
+const all = results.flatMap((r) => r.items);
+all.sort((a, b) => (Date.parse(b.pubDate) || 0) - (Date.parse(a.pubDate) || 0));
 const items = all.slice(0, TOTAL);
+
+console.log(`→ summary: ${ok}/${FEEDS.length} feeds ok, ${items.length} items aggregated`);
+if (failed.length) console.warn(`→ failed sources: ${failed.map((f) => f.source).join(", ")}`);
+
+const target = resolve("src/data/tech-news.generated.ts");
+mkdirSync(dirname(target), { recursive: true });
+
+if (items.length === 0 && existsSync(target)) {
+  console.warn("! all feeds failed — keeping previously generated tech-news.generated.ts as fallback");
+  process.exit(0);
+}
 
 const out = `// AUTO-GENERATED FILE — do not edit by hand.
 // Regenerated at build time by scripts/fetch-tech-feeds.mjs from public English RSS sources.
@@ -121,9 +159,10 @@ export type TechNewsItem = {
 
 export const TECH_NEWS: TechNewsItem[] = ${JSON.stringify(items, null, 2)};
 export const TECH_NEWS_GENERATED_AT = ${JSON.stringify(new Date().toISOString())};
+export const TECH_NEWS_SOURCES_OK = ${ok};
+export const TECH_NEWS_SOURCES_TOTAL = ${FEEDS.length};
 `;
 
-const target = resolve("src/data/tech-news.generated.ts");
-mkdirSync(dirname(target), { recursive: true });
 writeFileSync(target, out);
 console.log(`✓ tech-news.generated.ts written with ${items.length} items`);
+
