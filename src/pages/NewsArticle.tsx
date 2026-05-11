@@ -5,6 +5,9 @@ import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import articlesData from "@/data/articles.json";
 
+const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "")
+  || (typeof window !== "undefined" ? window.location.origin : "");
+
 const setMeta = (selector: string, attr: string, value: string) => {
   let el = document.head.querySelector<HTMLMetaElement>(selector);
   if (!el) {
@@ -24,12 +27,27 @@ const NewsArticle = () => {
 
   useEffect(() => {
     if (!article) return;
-    const url = `/news/${article.slug}.html`;
+    const path = `/news/${article.slug}.html`;
+    const absoluteUrl = `${SITE_URL}${path}`;
     document.title = `${article.title} | Singularity University`;
+
     setMeta('meta[name="description"]', "content", article.excerpt);
+
+    // OpenGraph
     setMeta('meta[property="og:title"]', "content", article.title);
     setMeta('meta[property="og:description"]', "content", article.excerpt);
     setMeta('meta[property="og:type"]', "content", "article");
+    setMeta('meta[property="og:url"]', "content", absoluteUrl);
+    setMeta('meta[property="og:site_name"]', "content", "Singularity University");
+    setMeta('meta[property="article:published_time"]', "content", article.date);
+    setMeta('meta[property="article:section"]', "content", article.category);
+    setMeta('meta[property="article:author"]', "content", `Singularity University — ${article.author}`);
+
+    // Twitter Card
+    setMeta('meta[name="twitter:card"]', "content", "summary_large_image");
+    setMeta('meta[name="twitter:title"]', "content", article.title);
+    setMeta('meta[name="twitter:description"]', "content", article.excerpt);
+    setMeta('meta[name="twitter:url"]', "content", absoluteUrl);
 
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
@@ -37,7 +55,7 @@ const NewsArticle = () => {
       canonical.rel = "canonical";
       document.head.appendChild(canonical);
     }
-    canonical.href = url;
+    canonical.href = absoluteUrl;
 
     const ld = document.createElement("script");
     ld.type = "application/ld+json";
@@ -49,7 +67,8 @@ const NewsArticle = () => {
       datePublished: article.date,
       author: { "@type": "Organization", name: `Singularity University — ${article.author}` },
       publisher: { "@type": "Organization", name: "Singularity University KdK Krzb." },
-      mainEntityOfPage: url,
+      mainEntityOfPage: absoluteUrl,
+      url: absoluteUrl,
       articleSection: article.category,
     });
     document.head.appendChild(ld);

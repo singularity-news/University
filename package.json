@@ -7,7 +7,7 @@
     "dev": "vite",
     "prebuild": "node scripts/fetch-tech-feeds.mjs",
     "build": "vite build",
-    "postbuild": "node scripts/generate-sitemap.mjs",
+    "postbuild": "node scripts/generate-sitemap.mjs && node scripts/validate-build.mjs",
     "build:dev": "vite build --mode development",
     "lint": "eslint .",
     "preview": "vite preview",

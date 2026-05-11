@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects / SPA fallback
+# Static files (sitemap, rss, robots, assets) are served as-is.
+
+# Pretty news URLs -> .html variants are handled by router; ensure deep links work.
+/news/*    /index.html   200
+/news.html /index.html   200
+
+# SPA fallback for everything else (must be last)
+/*         /index.html   200
