@@ -4,8 +4,13 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
+// Deploy targets:
+//   DEPLOY_TARGET=gh        -> GitHub Pages (subpath /kdk-university/)
+//   DEPLOY_TARGET=cloudflare (or unset in prod) -> Cloudflare Pages (root /)
+const deployTarget = process.env.DEPLOY_TARGET || "cloudflare";
+
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/kdk-university/" : "/",
+  base: mode === "production" ? (deployTarget === "gh" ? "/kdk-university/" : "/") : "/",
   server: {
     host: "::",
     port: 8080,
