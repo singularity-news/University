@@ -3,7 +3,7 @@
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
-const SITE_URL = (process.env.SITE_URL || "https://singularity-news.github.io/University").replace(/\/$/, "");
+const SITE_URL = (process.env.SITE_URL || "https://singularity-news.github.io/kdk-university").replace(/\/$/, "");
 const today = new Date().toISOString().slice(0, 10);
 const nowRfc822 = new Date().toUTCString();
 

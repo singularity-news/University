@@ -27,7 +27,7 @@ jobs:
       - name: Build (prebuild fetches RSS, postbuild writes sitemap/robots/rss)
         run: npm run build
         env:
-          SITE_URL: https://singularity-news.github.io/University
+          SITE_URL: https://singularity-news.github.io/kdk-university
       - name: SPA 404 fallback
         run: cp dist/index.html dist/404.html || true
       - uses: actions/upload-pages-artifact@v3
