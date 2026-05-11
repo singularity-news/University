@@ -10,172 +10,230 @@ export type TechNewsItem = {
 
 export const TECH_NEWS: TechNewsItem[] = [
   {
-    "title": "France Moves to Break Encrypted Messaging",
-    "link": "https://reclaimthenet.org/france-moves-to-break-encrypted-messaging",
-    "description": "Article URL: https://reclaimthenet.org/france-moves-to-break-encrypted-messaging Comments URL: https://news.ycombinator.com/item?id=48078811 Points: 70 # Comments: 27",
-    "pubDate": "Sat, 09 May 2026 22:14:35 +0000",
+    "title": "Nintendo Shares Tumble After Lackluster Switch 2 Games Outlook",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-11/nintendo-shares-tumble-after-lackluster-switch-2-games-outlook",
+    "description": "Nintendo Co.’s shares plunged the most in three months after the company forecast hardware and software sales declines, a sign that the Switch 2 has yet to create a self-sustaining demand cycle.",
+    "pubDate": "Mon, 11 May 2026 00:18:55 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "PS3 Emulator Devs Politely Ask That People Stop Flooding It with AI PRs",
+    "link": "https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656",
+    "description": "Article URL: https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656 Comments URL: https://news.ycombinator.com/item?id=48089263 Points: 19 # Comments: 2",
+    "pubDate": "Sun, 10 May 2026 23:36:48 +0000",
     "source": "Hacker News"
   },
   {
-    "title": "Getting arrested in Japan",
-    "link": "https://sundaicity.com/blogs/getting-arrested-in-japan",
-    "description": "Article URL: https://sundaicity.com/blogs/getting-arrested-in-japan Comments URL: https://news.ycombinator.com/item?id=48078647 Points: 139 # Comments: 146",
-    "pubDate": "Sat, 09 May 2026 21:56:19 +0000",
+    "title": "Running local models on an M4 with 24GB memory",
+    "link": "https://jola.dev/posts/running-local-models-on-m4",
+    "description": "Article URL: https://jola.dev/posts/running-local-models-on-m4 Comments URL: https://news.ycombinator.com/item?id=48089091 Points: 35 # Comments: 20",
+    "pubDate": "Sun, 10 May 2026 23:09:10 +0000",
     "source": "Hacker News"
   },
   {
-    "title": "Rust but Lisp",
-    "link": "https://github.com/ThatXliner/rust-but-lisp",
-    "description": "Article URL: https://github.com/ThatXliner/rust-but-lisp Comments URL: https://news.ycombinator.com/item?id=48078575 Points: 72 # Comments: 35",
-    "pubDate": "Sat, 09 May 2026 21:46:27 +0000",
+    "title": "Yes, local LLMs are ready to ease the compute strain",
+    "link": "https://www.theregister.com/ai-and-ml/2026/05/11/yes-local-llms-are-ready-to-ease-the-compute-strain/5237451",
+    "description": "KETTLE We've been experimenting with LLMs for a while here at The Register, and if you ask our systems editor Tobias Mann and senior reporter Tom Claburn, locally installed coding assistants have actually become so good they could relieve some of the compute load that's pushing AI companies to raise their prices.",
+    "pubDate": "Mon, 11 May 2026 01:00:00 +0200",
+    "source": "The Register"
+  },
+  {
+    "title": "Obsidian plugin was abused to deploy a remote access trojan",
+    "link": "https://cyber.netsecops.io/articles/obsidian-plugin-abused-in-campaign-to-deploy-phantom-pulse-rat/",
+    "description": "Article URL: https://cyber.netsecops.io/articles/obsidian-plugin-abused-in-campaign-to-deploy-phantom-pulse-rat/ Comments URL: https://news.ycombinator.com/item?id=48088576 Points: 38 # Comments: 17",
+    "pubDate": "Sun, 10 May 2026 22:02:43 +0000",
     "source": "Hacker News"
   },
   {
-    "title": "Local privilege escalation via execve()",
-    "link": "https://www.freebsd.org/security/advisories/FreeBSD-SA-26:13.exec.asc",
-    "description": "Article URL: https://www.freebsd.org/security/advisories/FreeBSD-SA-26:13.exec.asc Comments URL: https://news.ycombinator.com/item?id=48077971 Points: 86 # Comments: 57",
-    "pubDate": "Sat, 09 May 2026 20:31:21 +0000",
+    "title": "Why modern parents feel more sleep deprived than our ancestors did",
+    "link": "https://www.bbc.com/future/article/20260508-parents-in-ancient-times-felt-less-sleep-deprived-what-our-ancestors-did-differently-on-baby-sleep",
+    "description": "Article URL: https://www.bbc.com/future/article/20260508-parents-in-ancient-times-felt-less-sleep-deprived-what-our-ancestors-did-differently-on-baby-sleep Comments URL: https://news.ycombinator.com/item?id=48088343 Points: 65 # Comments: 46",
+    "pubDate": "Sun, 10 May 2026 21:36:52 +0000",
     "source": "Hacker News"
   },
   {
-    "title": "I caught the car",
-    "link": "https://undecidability.net/senior/",
-    "description": "Article URL: https://undecidability.net/senior/ Comments URL: https://news.ycombinator.com/item?id=48077966 Points: 39 # Comments: 37",
-    "pubDate": "Sat, 09 May 2026 20:31:07 +0000",
+    "title": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
+    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
+    "description": "Article URL: https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises Comments URL:…",
+    "pubDate": "Sun, 10 May 2026 21:16:58 +0000",
     "source": "Hacker News"
   },
   {
-    "title": "Surfel-based global illumination on the web",
-    "link": "https://juretriglav.si/surfel-based-global-illumination-on-the-web/",
-    "description": "Article URL: https://juretriglav.si/surfel-based-global-illumination-on-the-web/ Comments URL: https://news.ycombinator.com/item?id=48077395 Points: 12 # Comments: 0",
-    "pubDate": "Sat, 09 May 2026 19:09:34 +0000",
-    "source": "Hacker News"
+    "title": "Get ready for the whisper-filled office of the future",
+    "link": "https://techcrunch.com/2026/05/10/get-ready-for-the-whisper-filled-office-of-the-future/",
+    "description": "How will work setups change if we spend more and more time talking to our computers?",
+    "pubDate": "Sun, 10 May 2026 21:15:30 +0000",
+    "source": "TechCrunch"
   },
   {
-    "title": "Musk v. Altman week 2: OpenAI fires back, and Shivon Zilis reveals that Musk tried to poach Sam Altman",
-    "link": "https://www.technologyreview.com/2026/05/08/1137008/musk-v-altman-week-2-openai-fires-back-and-shivon-zilis-reveals-that-musk-tried-to-poach-sam-altman/",
-    "description": "In the second week of the landmark trial between Elon Musk and OpenAI, Musk’s motivations for bringing the suit were under scrutiny. Last week, Musk took the stand, alleging that OpenAI CEO Sam Altman and president Greg Brockman had deceived him into donating $38 million to the company.",
-    "pubDate": "Fri, 08 May 2026 23:59:19 +0000",
-    "source": "MIT Technology Review"
-  },
-  {
-    "title": "Quantum dot TVs beat RGB LED TVs, says the company that makes QDs for TVs",
-    "link": "https://www.theverge.com/tech/927442/nanosys-sqd-vs-rgb-led",
-    "description": "RGB LED technology might be everyone’s focus for TV tech in 2026, but quantum-dot TVs still might be the better choice. | Photo by John Higgins / The Verge At the Los Angeles Convention Center, two 85-inch TVs sat side by side inside the Nanosys meeting room at Display Week - a yearly business-to-business convention…",
-    "pubDate": "2026-05-08T18:46:29-04:00",
+    "title": "The Bastl Kalimba is a wild synth that thinks it’s a thumb piano",
+    "link": "https://www.theverge.com/tech/927638/the-bastl-kalimba-is-a-wild-synth-that-thinks-its-a-thumb-piano",
+    "description": "It’s already raised over $700,000 on Kickstarter. | Image: Bastl Make no mistake, the Bastl Kalimba is a synthesizer, you just play it like a kalimba. Its tines don't really make much sound. There is an internal mic that you can blend in for a little acoustic spice, but it's mostly driven by the synth engine that…",
+    "pubDate": "2026-05-10T16:42:08-04:00",
     "source": "The Verge"
   },
   {
-    "title": "Dyson’s powerful 360 Vis Nav robovac is down to $279.99 for a limited time",
-    "link": "https://www.theverge.com/gadgets/926942/dyson-360-vis-nav-robot-vacuum-woot-dust-busting-deals-sale",
-    "description": "The 360 Vis Nav impressed us with its exceptionally powerful carpet-cleaning performance. | Photo: Jennifer Pattison Tuohy / The Verge. If you’re tired of running your vacuum multiple times just to get the dirt and debris out of the carpets in your living room, Dyson’s 360 Vis Nav is worth a look.",
-    "pubDate": "2026-05-08T17:39:10-04:00",
+    "title": "Anthropic says ‘evil’ portrayals of AI were responsible for Claude’s blackmail attempts",
+    "link": "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/",
+    "description": "Fictional portrayals of artificial intelligence can have a real effect on AI models, according to Anthropic.",
+    "pubDate": "Sun, 10 May 2026 20:40:41 +0000",
+    "source": "TechCrunch"
+  },
+  {
+    "title": "Inside a Year of Chaos and Conflict at Kevin Hart’s Media Company",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-10/inside-a-year-of-chaos-and-conflict-at-kevin-hart-s-media-company",
+    "description": "A new deal with Authentic Brands is seen by some employees as the beginning of the end",
+    "pubDate": "Sun, 10 May 2026 20:05:38 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "Uber has always wanted to be more than a ride; now it has reason to hurry",
+    "link": "https://techcrunch.com/2026/05/10/uber-has-always-wanted-to-be-more-than-a-ride-now-it-has-reason-to-hurry/",
+    "description": "The company has been trying to embed itself inside the AV industry — as a data provider, an investor, and a distribution platform — but the consumer-facing bet may be just as important.",
+    "pubDate": "Sun, 10 May 2026 18:08:54 +0000",
+    "source": "TechCrunch"
+  },
+  {
+    "title": "Ashnymph’s Childhood EP is exhilarating dance goth rock",
+    "link": "https://www.theverge.com/entertainment/927620/ashnymph-childhood-ep-music-review",
+    "description": "I can’t wait for a proper full length. | Image: Blitzcat Records I've got to thank my oldest friend and concert buddy, Tim, for turning me on to this one. Ashnymph is a London band that blends post-punk melodies with Krautrock rhythms and industrial grime.",
+    "pubDate": "2026-05-10T12:52:41-04:00",
     "source": "The Verge"
   },
   {
-    "title": "These great digital gifts will arrive just in time for Mother’s Day",
-    "link": "https://www.theverge.com/gadgets/927310/best-digital-gift-ideas-mothers-day-online-cards-subscriptions-2026",
-    "description": "And just like that, Mother’s Day is tomorrow, May 10th, which is too soon for most online purchases to arrive in time. That said, you aren’t alone if you waited too long to pick up a gift this year, and you definitely aren’t alone in feeling guilty for considering digital gifts instead of something your mom can…",
-    "pubDate": "2026-05-08T17:39:04-04:00",
+    "title": "Cricut’s $99 craft cutting machine helped me feel creative again",
+    "link": "https://www.theverge.com/gadgets/924281/cricut-joy-2-smart-cutting-machine-printer-hands-on",
+    "description": "The desk-friendly Cricut Joy 2 comes in multiple colors. | Photo: Sheena Vasani / The Verge I've always been skeptical of products that claim to help you lead a more creative life. But one recently won me over.",
+    "pubDate": "2026-05-10T12:33:18-04:00",
     "source": "The Verge"
   },
   {
-    "title": "Asus chases Elgato with its own secondary touchscreen display",
-    "link": "https://www.theverge.com/games/927333/asus-rog-strix-xg129c-secondary-display",
-    "description": "Asus's latest gaming monitor is a little smaller than usual. The ROG Strix XG129C, announced on Friday, is a 12.3-inch touchscreen IPS display that's intended to be a sidekick for a larger main monitor, similar to the 14.1-inch secondary display in the 2020 Asus ROG Zephyrus Duo 15.",
-    "pubDate": "2026-05-08T16:34:24-04:00",
-    "source": "The Verge"
+    "title": "TechCrunch Mobility: Lime’s IPO gamble",
+    "link": "https://techcrunch.com/2026/05/10/techcrunch-mobility-limes-ipo-gamble/",
+    "description": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+    "pubDate": "Sun, 10 May 2026 16:05:00 +0000",
+    "source": "TechCrunch"
   },
   {
-    "title": "The game that makes me actually want to exercise",
-    "link": "https://www.theverge.com/tech/927177/zombies-run-boox-billie-eilish-installer",
-    "description": "Hi, friends! Welcome to Installer No. 127, your guide to the best and Verge-iest stuff in the world. (If you're new here, welcome, my Scorpion challenges your Sub-Zero to a duel, and also you can read all the old editions at the Installer homepage.) This week, I've been reading about Hasan Piker and lines and David…",
-    "pubDate": "2026-05-08T14:59:56-04:00",
-    "source": "The Verge"
+    "title": "We’re feeling cynical about xAI’s big deal with Anthropic",
+    "link": "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
+    "description": "On the latest episode of the Equity podcast, we discussed what xAI's deal with Anthropic might mean for parent company SpaceX.",
+    "pubDate": "Sun, 10 May 2026 15:34:25 +0000",
+    "source": "TechCrunch"
   },
   {
-    "title": "Chaos erupts as cyberattack disrupts learning platform Canvas amid finals",
-    "link": "https://arstechnica.com/security/2026/05/chaos-erupts-as-cyberattack-disrupts-learning-platform-canvas-amid-finals/",
-    "description": "Chaos erupted at schools and colleges throughout the US on Thursday as a cyberattack disrupted online learning platform Canvas just as students were due to take final exams. Canvas parent company Instructure said that as of Friday morning, the platform was back online.",
-    "pubDate": "Fri, 08 May 2026 18:33:48 +0000",
-    "source": "Ars Technica"
+    "title": "Apple to Make Design Changes in macOS 27 to Address Tahoe Quirks",
+    "link": "https://www.bloomberg.com/news/newsletters/2026-05-10/apple-plans-macos-27-design-changes-latest-on-ios-27-visionos-safari-wwdc-26-mozuaz9m",
+    "description": "Also: The latest on iOS 27 and the truth about the Vision Pro.",
+    "pubDate": "Sun, 10 May 2026 14:00:01 GMT",
+    "source": "Bloomberg Technology"
   },
   {
-    "title": "Let it snow",
-    "link": "https://www.theverge.com/entertainment/926911/snow-video-games-moomins-froggy",
-    "description": "Water gets all the credit. When gaming companies want to show off new graphics technology, things tend to get wet; splashing waves that are only possible with the latest physics engine, or puddles that can reflect the world around them thanks to ray tracing. But there's something special about snow.",
-    "pubDate": "2026-05-08T12:48:42-04:00",
-    "source": "The Verge"
+    "title": "Memory godboxes could offer relief from the RAMpocalypse",
+    "link": "https://www.theregister.com/systems/2026/05/10/memory-godboxes-could-offer-relief-from-the-rampocalypse/5237463",
+    "description": "In modern datacenters, storage can live anywhere — local to the machine, remotely accessed over the network, and/or shared between systems. The next generation of servers will treat system memory in much the same way.",
+    "pubDate": "Sun, 10 May 2026 16:00:00 +0200",
+    "source": "The Register"
   },
   {
-    "title": "Here’s what you need to know about the cruise ship hantavirus outbreak",
-    "link": "https://www.technologyreview.com/2026/05/08/1136988/heres-what-you-need-to-know-about-the-cruise-ship-hantavirus-outbreak/",
-    "description": "MIT Technology Review Explains: Let our writers untangle the complex, messy world of technology to help you understand what’s coming next. You can read more from the series here. Eight passengers aboard a Dutch-flagged cruise ship have contracted a type of hantavirus, a rare virus transmitted by rats.",
-    "pubDate": "Fri, 08 May 2026 16:19:40 +0000",
-    "source": "MIT Technology Review"
+    "title": "Microsoft’s African Data Center Falters on Payment Demands",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-10/microsoft-s-african-data-center-falters-on-payment-demands",
+    "description": "A major Microsoft Corp. data center site in East Africa has been delayed by disagreements with the Kenyan government over the company’s request for guaranteed payments, people familiar with the matter said.",
+    "pubDate": "Sun, 10 May 2026 13:05:48 GMT",
+    "source": "Bloomberg Technology"
   },
   {
-    "title": "Nick Bostrom Has a Plan for Humanity’s ‘Big Retirement’",
-    "link": "https://www.wired.com/story/nick-bostrom-has-a-plan-for-humanitys-big-retirement/",
-    "description": "The philosopher thinks humans should pursue advanced AI and the promise of a “solved world.”",
-    "pubDate": "Fri, 08 May 2026 15:00:00 +0000",
+    "title": "Both Fedora and Ubuntu will get AI support – soon",
+    "link": "https://www.theregister.com/oses/2026/05/10/both-fedora-and-ubuntu-will-get-ai-support-soon/5237409",
+    "description": "Both Ubuntu and Fedora have made it official: support is coming soon for running local generative AI instances. An epic and still-growing thread in the Fedora forums states one of the goals for the next version: the Fedora AI Developer Desktop Objective.",
+    "pubDate": "Sun, 10 May 2026 15:00:00 +0200",
+    "source": "The Register"
+  },
+  {
+    "title": "Why Stablecoins Are Crypto’s Real Payments Test",
+    "link": "https://www.bloomberg.com/news/videos/2026-05-10/why-stablecoins-are-crypto-s-real-payments-test-video",
+    "description": "Every year, Filipinos working overseas send $35 billion back home &mdash; and a growing share of those transfers are being executed using stablecoins. The blockchain technology promises to make cross-border payments cheaper and nearly instantaneous, offering an alternative to traditional remittance channels.",
+    "pubDate": "Sun, 10 May 2026 12:04:39 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "I measured 5G signals of AT&T, T-Mobile, and Verizon in a small town - here's what the data says",
+    "link": "https://www.zdnet.com/article/5g-in-rural-america-google-pixel/",
+    "description": "I've tested 5G in cities and on interstates. Now, I'm going through small towns with three Samsung phones in hand.",
+    "pubDate": "Sun, 10 May 2026 11:01:55 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "How I customized my Sonos speaker to make my home theater sound truly immersive",
+    "link": "https://www.zdnet.com/article/how-i-customized-my-sonos-speaker-for-better-audio/",
+    "description": "If you've left your Sonos system's audio settings untouched, you're missing out. Here's what you need to know about them.",
+    "pubDate": "Sun, 10 May 2026 11:01:41 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "Could Contact-Tracing Apps Help With the Hantavirus? Not Really",
+    "link": "https://www.wired.com/story/could-contact-tracing-apps-help-with-the-hantavirus-not-really/",
+    "description": "Contact-tracing apps were widely deployed during the Covid pandemic. They aren’t as helpful during smaller outbreaks.",
+    "pubDate": "Sun, 10 May 2026 11:00:00 +0000",
     "source": "WIRED"
   },
   {
-    "title": "The Download: AI malaise and babymaking tech",
-    "link": "https://www.technologyreview.com/2026/05/08/1136985/the-download-ai-malaise-babymaking-ivf-tech/",
-    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. We’ve entered the era of AI malaise AI is spreading everywhere, and it is not going away. But what will it do? What effect will it have on our society?",
-    "pubDate": "Fri, 08 May 2026 12:10:00 +0000",
-    "source": "MIT Technology Review"
-  },
-  {
-    "title": "Here’s how technology transformed babymaking",
-    "link": "https://www.technologyreview.com/2026/05/08/1136974/heres-how-technology-transformed-babymaking-ivf/",
-    "description": "Technology is changing the way we make babies. The pioneering work of the scientists who invented IVF led to the birth of the first “test tube baby” in 1978. We’ve come a long, long way since then. This week, I’ve been working on a piece about the cutting edge of IVF technologies and what’s coming next.",
-    "pubDate": "Fri, 08 May 2026 09:00:00 +0000",
-    "source": "MIT Technology Review"
-  },
-  {
-    "title": "Musk v. Altman Evidence Shows What Microsoft Executives Thought of OpenAI",
-    "link": "https://www.wired.com/story/microsoft-executives-discuss-openai-sam-altman-2018/",
-    "description": "Leaders at the tech giant were skeptical of OpenAI—but wary of pushing it into the arms of Amazon, according to emails dating back to 2018.",
-    "pubDate": "Fri, 08 May 2026 01:42:14 +0000",
+    "title": "Do City Delivery Drones Make Sense? No One Knows, but They're Flying Over NYC",
+    "link": "https://www.wired.com/story/do-city-delivery-drones-make-sense-no-one-knows-but-theyre-flying-over-nyc/",
+    "description": "One of the country’s busiest airspaces has a new kind of flying machine—maybe temporarily.",
+    "pubDate": "Sun, 10 May 2026 10:30:00 +0000",
     "source": "WIRED"
   },
   {
-    "title": "Trump Pivots on AI Regulation, Worker Ousted by DOGE Runs for Office, and Hantavirus Explained",
-    "link": "https://www.wired.com/story/uncanny-valley-podcast-trump-pivots-ai-regulation-worker-ousted-by-doge-runs-for-office-hantavirus-explained/",
-    "description": "Today on Uncanny Valley, we’re diving into recent reports that the Trump administration is considering an executive order that would establish some sort of federal oversight over new AI models.",
-    "pubDate": "Thu, 07 May 2026 21:37:20 +0000",
+    "title": "I use these 10 secret Netflix codes to find hidden movies - here's how to enter them",
+    "link": "https://www.zdnet.com/article/netflix-codes-how-to-find-hidden-movies-free/",
+    "description": "Netflix codes let you access movies in buried genres and micro-categories - for free. Here's how, plus my favorites.",
+    "pubDate": "Sun, 10 May 2026 10:00:39 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "How Handheld Translators Work and Why They’re Handy for Travel",
+    "link": "https://www.wired.com/story/why-you-need-a-handheld-translator-for-travel/",
+    "description": "Your cell phone can handle basic language translation, but bespoke tools can offer a much more immersive experience.",
+    "pubDate": "Sun, 10 May 2026 10:00:00 +0000",
     "source": "WIRED"
   },
   {
-    "title": "How to Disable Google's Gemini in Chrome",
-    "link": "https://www.wired.com/story/you-can-disable-gemini-in-chrome-if-its-freaking-you-out/",
-    "description": "Chrome users were caught off guard by a 4-GB Google AI model baked into Chrome, sparking privacy concerns. The good news: You can easily uninstall it. The bad? You might not want to.",
-    "pubDate": "Thu, 07 May 2026 20:31:57 +0000",
+    "title": "‘Reservation Hijacking’ Scams Target Travelers. Here’s How to Stay Safe",
+    "link": "https://www.wired.com/story/reservation-hijacks-scam-safety-tips/",
+    "description": "The hotel staffer who calls you with an urgent request for payment isn’t necessarily who they say they are.",
+    "pubDate": "Sun, 10 May 2026 09:30:00 +0000",
     "source": "WIRED"
   },
   {
-    "title": "Mozilla says 271 vulnerabilities found by Mythos have \"almost no false positives\"",
-    "link": "https://arstechnica.com/information-technology/2026/05/mozilla-says-271-vulnerabilities-found-by-mythos-have-almost-no-false-positives/",
-    "description": "The disbelief was palpable when Mozilla’s CTO last month declared that AI-assisted vulnerability detection meant “zero-days are numbered” and “defenders finally have a chance to win, decisively.” After all, it looked like part of an all-too-familiar pattern: Cherry-pick a handful of impressive AI-achieved results,…",
-    "pubDate": "Thu, 07 May 2026 19:18:16 +0000",
-    "source": "Ars Technica"
+    "title": "HP stuffed a PC into a keyboard. We took it for a spin",
+    "link": "https://www.theregister.com/personal-tech/2026/05/10/hp-eliteboard-g1a-puts-a-pc-inside-a-keyboard/5235258",
+    "description": "The early history of personal computers is stacked with systems such as the Apple II and the Commodore 64 that had the components living inside a keyboard. But as technology evolved, the keyboard became a peripheral and the PC itself was either in a separate box or the whole system was a laptop.",
+    "pubDate": "Sun, 10 May 2026 11:30:00 +0200",
+    "source": "The Register"
   },
   {
-    "title": "ChatGPT Has ‘Goblin’ Mania in the US. In China It Will ‘Catch You Steadily’",
-    "link": "https://www.wired.com/story/chatgpt-chinese-catch-you-steadily-sycophancy/",
-    "description": "OpenAI’s chatbot has some weird linguistic tics in Chinese that are driving users crazy.",
-    "pubDate": "Thu, 07 May 2026 16:25:48 +0000",
-    "source": "WIRED"
+    "title": "The best Sony TVs of 2026: Expert tested and reviewed",
+    "link": "https://www.zdnet.com/article/best-sony-tv/",
+    "description": "Sony is one of the top names in high-end TVs, and we've tested LED and OLED options to help you find the best fit for your space.",
+    "pubDate": "Sun, 10 May 2026 09:01:05 GMT",
+    "source": "ZDNet"
   },
   {
-    "title": "The Download: the tech reshaping IVF and the rise of balcony solar",
-    "link": "https://www.technologyreview.com/2026/05/07/1136956/the-download-ivf-tech-balcony-solar/",
-    "description": "This is today’s edition of The Download, our weekday newsletter that provides a daily dose of what’s going on in the world of technology. What’s next for IVF IVF has brought millions of babies into the world over the last four decades.",
-    "pubDate": "Thu, 07 May 2026 12:10:00 +0000",
-    "source": "MIT Technology Review"
+    "title": "Yes, you can get Microsoft 365 free - here's how",
+    "link": "https://www.zdnet.com/article/how-to-get-microsoft-365-free/",
+    "description": "The former Microsoft Office suite (including Word, Excel, and PowerPoint) now requires a subscription - but there are easy ways to get it free.",
+    "pubDate": "Sun, 10 May 2026 08:00:36 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "Google tweaks Chrome AI privacy wording, insists processing stays on-device",
+    "link": "https://www.theregister.com/ai-and-ml/2026/05/09/google-tweaks-chrome-ai-privacy-wording-insists-processing-stays-on-device/5237580",
+    "description": "Google has changed Chrome's disclosure language about how its on-device AI works, but that doesn't mean the company intends to capture on-device AI interactions. The Chrome menu modification, which isn't universally rolled out yet even in Chrome 148, was noted this week on Reddit.",
+    "pubDate": "Sat, 09 May 2026 19:57:11 +0200",
+    "source": "The Register"
   }
 ];
-export const TECH_NEWS_GENERATED_AT = "2026-05-10T01:52:12.325Z";
+export const TECH_NEWS_GENERATED_AT = "2026-05-11T00:28:29.460Z";
+export const TECH_NEWS_SOURCES_OK = 9;
+export const TECH_NEWS_SOURCES_TOTAL = 9;
