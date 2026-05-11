@@ -5,15 +5,19 @@ import { writeFileSync, mkdirSync, existsSync } from "node:fs";
 import { resolve, dirname } from "node:path";
 
 const FEEDS = [
-  { url: "https://hnrss.org/frontpage", source: "Hacker News" },
+  { url: "https://www.wired.com/feed/rss", source: "WIRED" },
+  { url: "https://www.zdnet.com/news/rss.xml", source: "ZDNet" },
+  { url: "https://techcrunch.com/feed/", source: "TechCrunch" },
   { url: "https://www.theverge.com/rss/index.xml", source: "The Verge" },
-  { url: "https://www.wired.com/feed/category/business/latest/rss", source: "WIRED" },
+  { url: "https://www.theregister.co.uk/headlines.atom", source: "The Register" },
+  { url: "https://feeds.bloomberg.com/technology/news.rss", source: "Bloomberg Technology" },
+  { url: "https://hnrss.org/frontpage", source: "Hacker News" },
   { url: "https://feeds.arstechnica.com/arstechnica/technology-lab", source: "Ars Technica" },
   { url: "https://www.technologyreview.com/feed/", source: "MIT Technology Review" },
 ];
 
-const PER_FEED = 6;
-const TOTAL = 24;
+const PER_FEED = 5;
+const TOTAL = 32;
 const TIMEOUT_MS = 8000;
 
 const stripTags = (s = "") =>
