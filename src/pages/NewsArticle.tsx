@@ -33,12 +33,16 @@ const NewsArticle = () => {
 
     setMeta('meta[name="description"]', "content", article.excerpt);
 
+    const ogImage = `${SITE_URL}/og-image.png`;
+
     // OpenGraph
     setMeta('meta[property="og:title"]', "content", article.title);
     setMeta('meta[property="og:description"]', "content", article.excerpt);
     setMeta('meta[property="og:type"]', "content", "article");
     setMeta('meta[property="og:url"]', "content", absoluteUrl);
     setMeta('meta[property="og:site_name"]', "content", "Singularity University");
+    setMeta('meta[property="og:image"]', "content", ogImage);
+    setMeta('meta[property="og:image:alt"]', "content", "Singularity University · KdK Krzb.");
     setMeta('meta[property="article:published_time"]', "content", article.date);
     setMeta('meta[property="article:section"]', "content", article.category);
     setMeta('meta[property="article:author"]', "content", `Singularity University — ${article.author}`);
@@ -48,6 +52,7 @@ const NewsArticle = () => {
     setMeta('meta[name="twitter:title"]', "content", article.title);
     setMeta('meta[name="twitter:description"]', "content", article.excerpt);
     setMeta('meta[name="twitter:url"]', "content", absoluteUrl);
+    setMeta('meta[name="twitter:image"]', "content", ogImage);
 
     let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
     if (!canonical) {
