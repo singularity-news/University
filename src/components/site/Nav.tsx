@@ -3,10 +3,9 @@ import { Link } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 
 const links = [
-  { href: "/#about", label: "About" },
-  { href: "/#juridical", label: "Juridical Singularity" },
-  { href: "/#technocracy", label: "Electric Technocracy" },
-  { href: "/#research", label: "Research" },
+  { href: "/juridical-singularity.html", label: "Juridical Singularity", route: true },
+  { href: "/electric-technocracy.html", label: "Electric Technocracy", route: true },
+  { href: "/research.html", label: "Research", route: true },
   { href: "/news.html", label: "News", route: true },
 ];
 

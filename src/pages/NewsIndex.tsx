@@ -45,11 +45,19 @@ const NewsIndex = () => {
   const filtered = active === "All" ? articlesData : articlesData.filter((a) => a.category === active);
 
   useEffect(() => {
+    const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "")
+      || (typeof window !== "undefined" ? window.location.origin : "");
+    const ogImage = `${SITE_URL}/og-image.png`;
     document.title = TITLE;
     setMeta('meta[name="description"]', "content", DESCRIPTION);
     setMeta('meta[property="og:title"]', "content", TITLE);
     setMeta('meta[property="og:description"]', "content", DESCRIPTION);
     setMeta('meta[property="og:type"]', "content", "website");
+    setMeta('meta[property="og:image"]', "content", ogImage);
+    setMeta('meta[name="twitter:card"]', "content", "summary_large_image");
+    setMeta('meta[name="twitter:title"]', "content", TITLE);
+    setMeta('meta[name="twitter:description"]', "content", DESCRIPTION);
+    setMeta('meta[name="twitter:image"]', "content", ogImage);
   }, []);
 
   return (
