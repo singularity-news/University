@@ -11,6 +11,9 @@ const articles = JSON.parse(readFileSync(resolve("src/data/articles.json"), "utf
 
 const routes = [
   { loc: "/", priority: "1.0", changefreq: "weekly" },
+  { loc: "/juridical-singularity.html", priority: "0.9", changefreq: "monthly" },
+  { loc: "/electric-technocracy.html", priority: "0.9", changefreq: "monthly" },
+  { loc: "/research.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/news.html", priority: "0.9", changefreq: "daily" },
   ...articles.map((a) => ({
     loc: `/news/${a.slug}.html`,
