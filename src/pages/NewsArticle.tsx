@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { ShareButtons } from "@/components/site/ShareButtons";
+import { BackToTop } from "@/components/site/BackToTop";
 import articlesData from "@/data/articles.json";
 
 const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "")
@@ -131,13 +133,16 @@ const NewsArticle = () => {
             ))}
           </div>
 
-          <div className="mt-16 pt-8 border-t border-border/60 text-xs tracking-[0.2em] uppercase text-muted-foreground">
+          <ShareButtons url={`/news/${article.slug}.html`} title={article.title} />
+
+          <div className="mt-8 pt-8 border-t border-border/60 text-xs tracking-[0.2em] uppercase text-muted-foreground">
             Singularity University · KdK Krzb. · Editorial Board
           </div>
         </div>
       </article>
 
       <Footer />
+      <BackToTop />
     </main>
   );
 };
