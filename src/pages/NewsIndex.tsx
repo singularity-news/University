@@ -4,6 +4,9 @@ import { Rss, ExternalLink, ArrowRight } from "lucide-react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
 import { SectionHeader } from "@/components/site/SectionHeader";
+import { Embeds } from "@/components/site/Embeds";
+import { ShareButtons } from "@/components/site/ShareButtons";
+import { BackToTop } from "@/components/site/BackToTop";
 import { TECH_NEWS, TECH_NEWS_GENERATED_AT } from "@/data/tech-news.generated";
 import articlesData from "@/data/articles.json";
 
@@ -173,7 +176,16 @@ const NewsIndex = () => {
         </section>
       )}
 
+      <section className="section-pad border-t border-border/60">
+        <div className="container max-w-3xl">
+          <ShareButtons url="/news.html" title="Public News Portal · Singularity University" />
+        </div>
+      </section>
+
+      <Embeds />
+
       <Footer />
+      <BackToTop />
     </main>
   );
 };
