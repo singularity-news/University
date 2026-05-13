@@ -6,8 +6,8 @@ import { Technocracy } from "@/components/site/Technocracy";
 import { Research } from "@/components/site/Research";
 import { News } from "@/components/site/News";
 import { CTA } from "@/components/site/CTA";
-import { Embeds } from "@/components/site/Embeds";
 import { Footer } from "@/components/site/Footer";
+import { BackToTop } from "@/components/site/BackToTop";
 
 const Index = () => {
   return (
@@ -20,8 +20,8 @@ const Index = () => {
       <Research />
       <News />
       <CTA />
-      <Embeds />
       <Footer />
+      <BackToTop />
     </main>
   );
 };
