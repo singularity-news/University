@@ -1,9 +1,10 @@
+import { useState } from "react";
 import { SectionHeader } from "./SectionHeader";
 
-// Cross-origin iframes can't have their inner content restyled from the parent.
-// We at minimum control the surrounding wrapper so it matches the dark theme
-// (deep blue background, light typography), and force colorScheme on the iframe
-// so the browser hints to the embedded page to render in dark mode where supported.
+// Cross-origin iframes can't be restyled from the parent. We control the
+// surrounding wrapper so it always matches the dark-blue site theme with
+// white typography, and we provide explicit loading + error fallbacks so
+// users never see a flash of unstyled (white) content.
 const iframeStyle = {
   border: 0,
   background: "hsl(var(--background))",
@@ -14,28 +15,67 @@ const Frame = ({
   src,
   title,
   height = 1200,
-  width = "100%",
+  maxWidth,
 }: {
   src: string;
   title: string;
   height?: number;
-  width?: string | number;
-}) => (
-  <div className="rounded-xl border border-border bg-background overflow-hidden text-foreground">
-    <iframe
-      src={src}
-      title={title}
-      width={width as number}
-      height={height}
-      loading="lazy"
-      className="w-full block bg-background"
-      style={iframeStyle}
-    />
-  </div>
-);
+  maxWidth?: number;
+}) => {
+  const [state, setState] = useState<"loading" | "ready" | "error">("loading");
+
+  return (
+    <div
+      className="relative rounded-xl border border-border bg-background overflow-hidden text-foreground"
+      style={{ minHeight: Math.min(height, 320) }}
+    >
+      {/* Loading skeleton — keeps wrapper dark-blue while iframe initialises */}
+      {state === "loading" && (
+        <div
+          className="absolute inset-0 flex flex-col items-center justify-center gap-3 bg-background text-foreground/70"
+          aria-hidden="true"
+        >
+          <div className="h-8 w-8 rounded-full border-2 border-primary/40 border-t-primary animate-spin" />
+          <span className="text-[11px] tracking-[0.25em] uppercase text-muted-foreground">
+            Loading {title}
+          </span>
+        </div>
+      )}
+
+      {/* Error fallback — same dark theme, white text */}
+      {state === "error" && (
+        <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 bg-background text-foreground p-6 text-center">
+          <span className="text-[11px] tracking-[0.25em] uppercase text-accent">Embed unavailable</span>
+          <p className="text-sm text-muted-foreground max-w-xs">
+            {title} could not be loaded. Please refresh or open the source directly.
+          </p>
+          <a
+            href={src}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs tracking-[0.2em] uppercase text-primary hover:underline"
+          >
+            Open source ↗
+          </a>
+        </div>
+      )}
+
+      <iframe
+        src={src}
+        title={title}
+        height={height}
+        loading="lazy"
+        onLoad={() => setState("ready")}
+        onError={() => setState("error")}
+        className="w-full block bg-background"
+        style={{ ...iframeStyle, maxWidth: maxWidth ? `${maxWidth}px` : "100%", margin: maxWidth ? "0 auto" : undefined, opacity: state === "ready" ? 1 : 0, transition: "opacity 250ms ease" }}
+      />
+    </div>
+  );
+};
 
 export const Embeds = () => (
-  <section id="channels" className="section-pad border-t border-border/60 relative">
+  <section id="channels" className="section-pad border-t border-border/60 relative bg-background text-foreground">
     <div className="container space-y-16">
       <div>
         <SectionHeader
@@ -76,17 +116,12 @@ export const Embeds = () => (
           title="Latest from Threads"
           description="Live posts syndicated from the Singularity University Threads channel."
         />
-        <div className="rounded-xl border border-border bg-background overflow-hidden text-foreground flex justify-center">
-          <iframe
-            src="https://widgets.sociablekit.com/threads-posts/iframe/25681284"
-            title="Threads · Singularity University"
-            width={500}
-            height={1200}
-            loading="lazy"
-            className="block bg-background w-full max-w-[520px]"
-            style={iframeStyle}
-          />
-        </div>
+        <Frame
+          src="https://widgets.sociablekit.com/threads-posts/iframe/25681284"
+          title="Threads · Singularity University"
+          height={1200}
+          maxWidth={520}
+        />
       </div>
     </div>
   </section>
