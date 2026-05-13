@@ -63,12 +63,14 @@ export const StaticPage = ({ title, description, path, eyebrow, heading, childre
           <div className="prose prose-invert max-w-none prose-headings:text-foreground prose-p:text-foreground/85 prose-p:leading-relaxed prose-p:text-base md:prose-p:text-lg prose-li:text-foreground/85 prose-a:text-primary prose-strong:text-foreground">
             {children}
           </div>
-          <div className="mt-16 pt-8 border-t border-border/60 text-xs tracking-[0.2em] uppercase text-muted-foreground">
+          <ShareButtons url={path} title={title} />
+          <div className="mt-8 pt-8 border-t border-border/60 text-xs tracking-[0.2em] uppercase text-muted-foreground">
             Singularity University · KdK Krzb. · Editorial Board
           </div>
         </div>
       </article>
       <Footer />
+      <BackToTop />
     </main>
   );
 };
