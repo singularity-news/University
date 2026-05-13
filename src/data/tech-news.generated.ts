@@ -10,230 +10,230 @@ export type TechNewsItem = {
 
 export const TECH_NEWS: TechNewsItem[] = [
   {
-    "title": "Nintendo Shares Tumble After Lackluster Switch 2 Games Outlook",
-    "link": "https://www.bloomberg.com/news/articles/2026-05-11/nintendo-shares-tumble-after-lackluster-switch-2-games-outlook",
-    "description": "Nintendo Co.’s shares plunged the most in three months after the company forecast hardware and software sales declines, a sign that the Switch 2 has yet to create a self-sustaining demand cycle.",
-    "pubDate": "Mon, 11 May 2026 00:18:55 GMT",
-    "source": "Bloomberg Technology"
-  },
-  {
-    "title": "PS3 Emulator Devs Politely Ask That People Stop Flooding It with AI PRs",
-    "link": "https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656",
-    "description": "Article URL: https://kotaku.com/playstation-3-emulator-devs-politely-ask-that-people-stop-flooding-it-with-ai-code-pull-requests-2000694656 Comments URL: https://news.ycombinator.com/item?id=48089263 Points: 19 # Comments: 2",
-    "pubDate": "Sun, 10 May 2026 23:36:48 +0000",
-    "source": "Hacker News"
-  },
-  {
-    "title": "Running local models on an M4 with 24GB memory",
-    "link": "https://jola.dev/posts/running-local-models-on-m4",
-    "description": "Article URL: https://jola.dev/posts/running-local-models-on-m4 Comments URL: https://news.ycombinator.com/item?id=48089091 Points: 35 # Comments: 20",
-    "pubDate": "Sun, 10 May 2026 23:09:10 +0000",
-    "source": "Hacker News"
-  },
-  {
-    "title": "Yes, local LLMs are ready to ease the compute strain",
-    "link": "https://www.theregister.com/ai-and-ml/2026/05/11/yes-local-llms-are-ready-to-ease-the-compute-strain/5237451",
-    "description": "KETTLE We've been experimenting with LLMs for a while here at The Register, and if you ask our systems editor Tobias Mann and senior reporter Tom Claburn, locally installed coding assistants have actually become so good they could relieve some of the compute load that's pushing AI companies to raise their prices.",
-    "pubDate": "Mon, 11 May 2026 01:00:00 +0200",
-    "source": "The Register"
-  },
-  {
-    "title": "Obsidian plugin was abused to deploy a remote access trojan",
-    "link": "https://cyber.netsecops.io/articles/obsidian-plugin-abused-in-campaign-to-deploy-phantom-pulse-rat/",
-    "description": "Article URL: https://cyber.netsecops.io/articles/obsidian-plugin-abused-in-campaign-to-deploy-phantom-pulse-rat/ Comments URL: https://news.ycombinator.com/item?id=48088576 Points: 38 # Comments: 17",
-    "pubDate": "Sun, 10 May 2026 22:02:43 +0000",
-    "source": "Hacker News"
-  },
-  {
-    "title": "Why modern parents feel more sleep deprived than our ancestors did",
-    "link": "https://www.bbc.com/future/article/20260508-parents-in-ancient-times-felt-less-sleep-deprived-what-our-ancestors-did-differently-on-baby-sleep",
-    "description": "Article URL: https://www.bbc.com/future/article/20260508-parents-in-ancient-times-felt-less-sleep-deprived-what-our-ancestors-did-differently-on-baby-sleep Comments URL: https://news.ycombinator.com/item?id=48088343 Points: 65 # Comments: 46",
-    "pubDate": "Sun, 10 May 2026 21:36:52 +0000",
-    "source": "Hacker News"
-  },
-  {
-    "title": "Maryland citizens hit with $2B power grid upgrade for out-of-state AI",
-    "link": "https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises",
-    "description": "Article URL: https://www.tomshardware.com/tech-industry/artificial-intelligence/maryland-citizens-slapped-with-usd2-billion-grid-upgrade-bill-for-out-of-state-ai-data-centers-state-complains-to-federal-energy-regulators-says-additional-cost-breaks-ratepayer-protection-pledge-promises Comments URL:…",
-    "pubDate": "Sun, 10 May 2026 21:16:58 +0000",
-    "source": "Hacker News"
-  },
-  {
-    "title": "Get ready for the whisper-filled office of the future",
-    "link": "https://techcrunch.com/2026/05/10/get-ready-for-the-whisper-filled-office-of-the-future/",
-    "description": "How will work setups change if we spend more and more time talking to our computers?",
-    "pubDate": "Sun, 10 May 2026 21:15:30 +0000",
+    "title": "Medicare’s new payment model is built for AI, and most of the tech world has no idea",
+    "link": "https://techcrunch.com/2026/05/12/medicares-new-payment-model-is-built-for-ai-and-most-of-the-tech-world-has-no-idea/",
+    "description": "There is no governmental mechanism to pay for an AI agent that monitors a patient between visits, calls to check in, coordinates a housing referral, or makes sure someone picks up their medication. ACCESS creates that mechanism for the first time.",
+    "pubDate": "Wed, 13 May 2026 00:26:48 +0000",
     "source": "TechCrunch"
   },
   {
-    "title": "The Bastl Kalimba is a wild synth that thinks it’s a thumb piano",
-    "link": "https://www.theverge.com/tech/927638/the-bastl-kalimba-is-a-wild-synth-that-thinks-its-a-thumb-piano",
-    "description": "It’s already raised over $700,000 on Kickstarter. | Image: Bastl Make no mistake, the Bastl Kalimba is a synthesizer, you just play it like a kalimba. Its tines don't really make much sound. There is an internal mic that you can blend in for a little acoustic spice, but it's mostly driven by the synth engine that…",
-    "pubDate": "2026-05-10T16:42:08-04:00",
+    "title": "Sam Altman was winning on the stand, but it might not be enough",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/929129/sam-altman-testimony-elon-musk-openai-trial",
+    "description": "Who, me? | Image: The Verge; Getty Images After two weeks of hearing from assorted witnesses that he was a lying snake, the jury finally heard from the lying snake himself: Sam Altman. At the end of the testimony, his lawyer William Savitt asked him how it felt to be accused of stealing a charity.",
+    "pubDate": "2026-05-12T20:13:34-04:00",
     "source": "The Verge"
   },
   {
-    "title": "Anthropic says ‘evil’ portrayals of AI were responsible for Claude’s blackmail attempts",
-    "link": "https://techcrunch.com/2026/05/10/anthropic-says-evil-portrayals-of-ai-were-responsible-for-claudes-blackmail-attempts/",
-    "description": "Fictional portrayals of artificial intelligence can have a real effect on AI models, according to Anthropic.",
-    "pubDate": "Sun, 10 May 2026 20:40:41 +0000",
-    "source": "TechCrunch"
+    "title": "Elon Musk Had ‘Hair-Raising’ Idea of Passing OpenAI Onto His Kids, Sam Altman Says",
+    "link": "https://www.wired.com/story/sam-altman-testifies-musk-v-altman-trial/",
+    "description": "Musk’s lawyers questioned Altman over allegations of deception and his network of financial investments, but the OpenAI CEO painted a picture of Musk as obsessed with controlling the company.",
+    "pubDate": "Wed, 13 May 2026 00:10:05 +0000",
+    "source": "WIRED"
   },
   {
-    "title": "Inside a Year of Chaos and Conflict at Kevin Hart’s Media Company",
-    "link": "https://www.bloomberg.com/news/articles/2026-05-10/inside-a-year-of-chaos-and-conflict-at-kevin-hart-s-media-company",
-    "description": "A new deal with Authentic Brands is seen by some employees as the beginning of the end",
-    "pubDate": "Sun, 10 May 2026 20:05:38 GMT",
+    "title": "My graduation cap runs Rust",
+    "link": "https://ericswpark.com/blog/2026/2026-05-12-my-graduation-cap-runs-rust/",
+    "description": "Article URL: https://ericswpark.com/blog/2026/2026-05-12-my-graduation-cap-runs-rust/ Comments URL: https://news.ycombinator.com/item?id=48116207 Points: 13 # Comments: 3",
+    "pubDate": "Wed, 13 May 2026 00:04:21 +0000",
+    "source": "Hacker News"
+  },
+  {
+    "title": "xAI Adds 19 New Gas Turbines Despite Ongoing Lawsuit",
+    "link": "https://www.wired.com/story/xai-adds-19-new-gas-turbines-despite-ongoing-lawsuit/",
+    "description": "Emails show that Elon Musk’s company is expanding its use of portable gas-fired power at its Colossus 2 site as a fight over air quality continues.",
+    "pubDate": "Wed, 13 May 2026 00:00:00 +0000",
+    "source": "WIRED"
+  },
+  {
+    "title": "Nidec Drops 18% After Flagging Quality Conduct Concerns",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-12/nidec-set-to-fall-after-company-flags-suspected-quality-issues",
+    "description": "Nidec Corp. shares slumped as much as 18% in Tokyo on Wednesday after the company said it identified suspected improper conduct on product quality.",
+    "pubDate": "Tue, 12 May 2026 23:47:01 GMT",
     "source": "Bloomberg Technology"
   },
   {
-    "title": "Uber has always wanted to be more than a ride; now it has reason to hurry",
-    "link": "https://techcrunch.com/2026/05/10/uber-has-always-wanted-to-be-more-than-a-ride-now-it-has-reason-to-hurry/",
-    "description": "The company has been trying to embed itself inside the AV industry — as a data provider, an investor, and a distribution platform — but the consumer-facing bet may be just as important.",
-    "pubDate": "Sun, 10 May 2026 18:08:54 +0000",
-    "source": "TechCrunch"
+    "title": "Alibaba, Tencent AI Bets Face ‘Show Me the Profits’ Scrutiny",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-12/alibaba-tencent-ai-bets-face-show-me-the-profits-scrutiny",
+    "description": "Chinese investors are heading into the earnings season demanding proof that billions in AI spending by tech giants is paying off.",
+    "pubDate": "Tue, 12 May 2026 23:40:14 GMT",
+    "source": "Bloomberg Technology"
   },
   {
-    "title": "Ashnymph’s Childhood EP is exhilarating dance goth rock",
-    "link": "https://www.theverge.com/entertainment/927620/ashnymph-childhood-ep-music-review",
-    "description": "I can’t wait for a proper full length. | Image: Blitzcat Records I've got to thank my oldest friend and concert buddy, Tim, for turning me on to this one. Ashnymph is a London band that blends post-punk melodies with Krautrock rhythms and industrial grime.",
-    "pubDate": "2026-05-10T12:52:41-04:00",
+    "title": "Kraftwerk's radical 1976 track",
+    "link": "https://www.bbc.com/culture/article/20260511-kraftwerks-radical-1976-track-radioactivity-became-an-anti-nuclear-anthem",
+    "description": "Article URL: https://www.bbc.com/culture/article/20260511-kraftwerks-radical-1976-track-radioactivity-became-an-anti-nuclear-anthem Comments URL: https://news.ycombinator.com/item?id=48115823 Points: 45 # Comments: 9",
+    "pubDate": "Tue, 12 May 2026 23:13:01 +0000",
+    "source": "Hacker News"
+  },
+  {
+    "title": "Tell NYT, Atlantic, USA Today to Keep Wayback Machine",
+    "link": "https://www.savethearchive.com/newsleaders/",
+    "description": "Article URL: https://www.savethearchive.com/newsleaders/ Comments URL: https://news.ycombinator.com/item?id=48115807 Points: 13 # Comments: 1",
+    "pubDate": "Tue, 12 May 2026 23:11:40 +0000",
+    "source": "Hacker News"
+  },
+  {
+    "title": "1789 Capital’s Abrahimzadeh on SpaceX, Cerebras Ipos",
+    "link": "https://www.bloomberg.com/news/videos/2026-05-12/1789-capital-s-abrahimzadeh-on-spacex-cerebras-ipos-video",
+    "description": "1789 Capital Partner Paul Abrahimzadeh speaks to Romaine Bostick and Katie Greifeld on \"The Close.\" (Source: Bloomberg)",
+    "pubDate": "Tue, 12 May 2026 23:00:36 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "China’s AI Suppliers Can’t Keep Up as Component Shortages Bite",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-12/china-s-ai-suppliers-can-t-keep-up-as-component-shortages-bite",
+    "description": "China’s artificial intelligence hardware suppliers have a problem: keeping up with insatiable demand for their products.",
+    "pubDate": "Tue, 12 May 2026 23:00:00 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "The Unitree GD01 Is a Giant Mecha Robot You Can Actually Buy",
+    "link": "https://www.wired.com/story/unitree-gd01-mecha-robot/",
+    "description": "China’s Unitree, famous for making low-cost dancing robots, will now sell you a giant, wall-smashing mecha.",
+    "pubDate": "Tue, 12 May 2026 22:51:45 +0000",
+    "source": "WIRED"
+  },
+  {
+    "title": "Foxconn confirms cyberattack after ransomware crew claims it stole confidential Apple, Nvidia files",
+    "link": "https://www.theregister.com/cyber-crime/2026/05/12/foxconn-confirms-cyberattack-after-nitrogen-claims-apple-nvidia-data-theft/5239144",
+    "description": "Foxconn, a critical supplier for major hardware companies like Apple and Nvidia, on Tuesday confirmed a cyberattack affecting its North American operations after the Nitrogen ransomware gang listed the electronics manufacturer on its data leak site.",
+    "pubDate": "Wed, 13 May 2026 00:02:35 +0200",
+    "source": "The Register"
+  },
+  {
+    "title": "Restore full BambuNetwork support for Bambu Lab printers",
+    "link": "https://github.com/FULU-Foundation/OrcaSlicer-bambulab",
+    "description": "Article URL: https://github.com/FULU-Foundation/OrcaSlicer-bambulab Comments URL: https://news.ycombinator.com/item?id=48115127 Points: 103 # Comments: 40",
+    "pubDate": "Tue, 12 May 2026 21:55:21 +0000",
+    "source": "Hacker News"
+  },
+  {
+    "title": "Foxconn Ransomware Attack Shows Nothing Is Safe Forever",
+    "link": "https://www.wired.com/story/foxconn-ransomware-attack-shows-nothing-is-safe-forever/",
+    "description": "Famous for helping build Apple’s iPhones, Foxconn just suffered another cyberattack, highlighting the perils of warehousing some of the world’s most valuable data.",
+    "pubDate": "Tue, 12 May 2026 21:52:05 +0000",
+    "source": "WIRED"
+  },
+  {
+    "title": "EFF to 4th Circuit: Electronic Device Searches at the Border Require a Warrant",
+    "link": "https://www.eff.org/deeplinks/2026/05/eff-fourth-circuit-electronic-device-searches-border-require-warrant",
+    "description": "Article URL: https://www.eff.org/deeplinks/2026/05/eff-fourth-circuit-electronic-device-searches-border-require-warrant Comments URL: https://news.ycombinator.com/item?id=48115059 Points: 53 # Comments: 7",
+    "pubDate": "Tue, 12 May 2026 21:48:24 +0000",
+    "source": "Hacker News"
+  },
+  {
+    "title": "iOS 27 might add a lot more customization to the Camera app",
+    "link": "https://www.theverge.com/tech/929152/apple-ios-27-camera-app-customization",
+    "description": "Apple's next iOS update could include something phone photographers have been waiting for: a lot more control over the Camera app. According to Bloomberg's Mark Gurman, the Camera app will be \"fully customizable\" in iOS 27 and users will be able to \"pick their own set of controls - called widgets - that run along the…",
+    "pubDate": "2026-05-12T17:36:11-04:00",
     "source": "The Verge"
   },
   {
-    "title": "Cricut’s $99 craft cutting machine helped me feel creative again",
-    "link": "https://www.theverge.com/gadgets/924281/cricut-joy-2-smart-cutting-machine-printer-hands-on",
-    "description": "The desk-friendly Cricut Joy 2 comes in multiple colors. | Photo: Sheena Vasani / The Verge I've always been skeptical of products that claim to help you lead a more creative life. But one recently won me over.",
-    "pubDate": "2026-05-10T12:33:18-04:00",
+    "title": "Google launches line of Android laptops festooned with Gemini AI",
+    "link": "https://www.theregister.com/personal-tech/2026/05/12/google-launches-line-of-android-laptops-festooned-with-gemini-ai/5239091",
+    "description": "Google is rolling out a new line of laptops based on Android instead of ChromeOS, and using the opportunity to try and move upmarket from the budget-conscious Chromebooks – while also baking AI into every fissure of the system.",
+    "pubDate": "Tue, 12 May 2026 23:15:17 +0200",
+    "source": "The Register"
+  },
+  {
+    "title": "Hollywood A-listers back proposed standard that would pay them when AI uses their likeness or work",
+    "link": "https://www.theregister.com/ai-ml/2026/05/12/actors-new-spec-aims-to-defeat-attack-of-the-ai-clones/5239115",
+    "description": "AI models can take your written work, they can take your voice, and they can even take your likeness to use for training material and for creating content that looks exactly like it came from you. Now, some actors are promoting a new licensing spec designed to protect their famous faces and yours too.",
+    "pubDate": "Tue, 12 May 2026 22:57:22 +0200",
+    "source": "The Register"
+  },
+  {
+    "title": "Meta won’t let you block its AI account on Threads",
+    "link": "https://www.theverge.com/tech/929091/meta-ai-threads-account-block",
+    "description": "Meta announced on Tuesday that it's testing a Threads feature that lets users tag a Meta AI account to get answers to questions or context about a conversation on the platform. If you've spent any time looking at replies on X as of late, this new feature sounds a lot like Meta's take on people tagging xAI's Grok.",
+    "pubDate": "2026-05-12T16:45:49-04:00",
     "source": "The Verge"
   },
   {
-    "title": "TechCrunch Mobility: Lime’s IPO gamble",
-    "link": "https://techcrunch.com/2026/05/10/techcrunch-mobility-limes-ipo-gamble/",
-    "description": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
-    "pubDate": "Sun, 10 May 2026 16:05:00 +0000",
+    "title": "MAHA Keeps Being Weird as Hell About Fertility",
+    "link": "https://www.wired.com/story/maha-is-still-creepily-obsessed-with-your-fertility/",
+    "description": "RFK Jr. and Mehmet Oz’s comments about teen sperm count and “underbabied” Americans at a recent women’s health event underscore the White House’s pronatalist agenda.",
+    "pubDate": "Tue, 12 May 2026 20:38:52 +0000",
+    "source": "WIRED"
+  },
+  {
+    "title": "I set up a $190 mesh Wi-Fi system at home, and it handled a dozen 4K video streams with ease",
+    "link": "https://www.zdnet.com/article/tenda-be5100-3-pack-mesh-wi-fi-system-review/",
+    "description": "The Tenda BE5100 three-pack mesh Wi-Fi system is a low-cost, high-speed, easy-to-use package that kills wireless dead spots.",
+    "pubDate": "Tue, 12 May 2026 20:08:46 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "Meta will tell parents when their teens add new interests to their Instagram algorithm",
+    "link": "https://www.theverge.com/tech/929009/meta-teen-accounts-algorithm-parental-controls",
+    "description": "Starting Tuesday, parents can get more details about what their teens are up to on Instagram. Meta is adding a feature to its Teen Accounts that shows parents the \"general topics their teens engage with,\" like \"basketball\" or \"fashion.\" Meta also says it will soon start notifying parents when their teen adds a new…",
+    "pubDate": "2026-05-12T15:56:50-04:00",
+    "source": "The Verge"
+  },
+  {
+    "title": "Samsung Labor Talks Collapse as Risks of Chip Disruption Rise",
+    "link": "https://www.bloomberg.com/news/articles/2026-05-12/samsung-fails-to-reach-labor-deal-yonhap-says-as-strike-looms",
+    "description": "Samsung Electronics Co. failed to reach a last-minute wage agreement with its largest labor union, heightening the risk of a strike that could disrupt operations at the world’s largest memory chipmaker.",
+    "pubDate": "Tue, 12 May 2026 19:06:54 GMT",
+    "source": "Bloomberg Technology"
+  },
+  {
+    "title": "I kept losing my Roku TV remotes - until I discovered 3 easy and cost-effective fixes",
+    "link": "https://www.zdnet.com/article/how-to-find-lost-roku-remote/",
+    "description": "From simply asking to using the app to secret buttons, there are several ways to find a lost remote.",
+    "pubDate": "Tue, 12 May 2026 19:00:01 GMT",
+    "source": "ZDNet"
+  },
+  {
+    "title": "Kevin Hartz’s A* just closed its third fund with $450M",
+    "link": "https://techcrunch.com/2026/05/12/kevin-hartzs-a-just-closed-its-third-fund-with-450-million/",
+    "description": "The firm takes a generalist approach, backing companies across categories such as AI applications, fintech, healthcare, and security. The average check size for this fund will be between $3 million and $5 million, with the aim to back at least 30 startups.",
+    "pubDate": "Tue, 12 May 2026 18:45:05 +0000",
     "source": "TechCrunch"
   },
   {
-    "title": "We’re feeling cynical about xAI’s big deal with Anthropic",
-    "link": "https://techcrunch.com/2026/05/10/were-feeling-cynical-about-xais-big-deal-with-anthropic/",
-    "description": "On the latest episode of the Equity podcast, we discussed what xAI's deal with Anthropic might mean for parent company SpaceX.",
-    "pubDate": "Sun, 10 May 2026 15:34:25 +0000",
+    "title": "Former Tesla exec and Heron Power CEO Drew Baglino has founded a heat pump startup",
+    "link": "https://techcrunch.com/2026/05/12/former-tesla-exec-and-heron-power-ceo-drew-baglino-has-founded-a-heat-pump-startup/",
+    "description": "Sadi Thermal Machines is Drew Baglino's second startup since leaving Tesla in 2024.",
+    "pubDate": "Tue, 12 May 2026 18:14:58 +0000",
     "source": "TechCrunch"
   },
   {
-    "title": "Apple to Make Design Changes in macOS 27 to Address Tahoe Quirks",
-    "link": "https://www.bloomberg.com/news/newsletters/2026-05-10/apple-plans-macos-27-design-changes-latest-on-ios-27-visionos-safari-wwdc-26-mozuaz9m",
-    "description": "Also: The latest on iOS 27 and the truth about the Vision Pro.",
-    "pubDate": "Sun, 10 May 2026 14:00:01 GMT",
-    "source": "Bloomberg Technology"
+    "title": "Sam Altman says Elon Musk’s mind games were damaging OpenAI",
+    "link": "https://www.theverge.com/ai-artificial-intelligence/928861/openai-sam-altman-elon-musk-damage",
+    "description": "OpenAI CEO Sam Altman says Elon Musk did \"huge damage\" to the culture of the AI startup. During testimony as part of Musk's lawsuit against OpenAI, Altman said Musk required OpenAI president Greg Brockman and former chief scientist Ilya Sutskever to rank researchers by their accomplishments and \"take a chainsaw…",
+    "pubDate": "2026-05-12T14:07:26-04:00",
+    "source": "The Verge"
   },
   {
-    "title": "Memory godboxes could offer relief from the RAMpocalypse",
-    "link": "https://www.theregister.com/systems/2026/05/10/memory-godboxes-could-offer-relief-from-the-rampocalypse/5237463",
-    "description": "In modern datacenters, storage can live anywhere — local to the machine, remotely accessed over the network, and/or shared between systems. The next generation of servers will treat system memory in much the same way.",
-    "pubDate": "Sun, 10 May 2026 16:00:00 +0200",
-    "source": "The Register"
+    "title": "Musk mulled handing OpenAI to his children, Altman testifies",
+    "link": "https://techcrunch.com/2026/05/12/musk-mulled-handing-openai-to-his-children-altman-testifies/",
+    "description": "Altman said that Musk's focus on controlling the initial for-profit gave him pause because OpenAI was dedicated to keeping advanced AI out of the hands of a single person, and Altman, with his experience running the prominent startup accelerator Y Combinator, knew \"founders who had control usually did not give it up.\"",
+    "pubDate": "Tue, 12 May 2026 18:05:15 +0000",
+    "source": "TechCrunch"
   },
   {
-    "title": "Microsoft’s African Data Center Falters on Payment Demands",
-    "link": "https://www.bloomberg.com/news/articles/2026-05-10/microsoft-s-african-data-center-falters-on-payment-demands",
-    "description": "A major Microsoft Corp. data center site in East Africa has been delayed by disagreements with the Kenyan government over the company’s request for guaranteed payments, people familiar with the matter said.",
-    "pubDate": "Sun, 10 May 2026 13:05:48 GMT",
-    "source": "Bloomberg Technology"
-  },
-  {
-    "title": "Both Fedora and Ubuntu will get AI support – soon",
-    "link": "https://www.theregister.com/oses/2026/05/10/both-fedora-and-ubuntu-will-get-ai-support-soon/5237409",
-    "description": "Both Ubuntu and Fedora have made it official: support is coming soon for running local generative AI instances. An epic and still-growing thread in the Fedora forums states one of the goals for the next version: the Fedora AI Developer Desktop Objective.",
-    "pubDate": "Sun, 10 May 2026 15:00:00 +0200",
-    "source": "The Register"
-  },
-  {
-    "title": "Why Stablecoins Are Crypto’s Real Payments Test",
-    "link": "https://www.bloomberg.com/news/videos/2026-05-10/why-stablecoins-are-crypto-s-real-payments-test-video",
-    "description": "Every year, Filipinos working overseas send $35 billion back home &mdash; and a growing share of those transfers are being executed using stablecoins. The blockchain technology promises to make cross-border payments cheaper and nearly instantaneous, offering an alternative to traditional remittance channels.",
-    "pubDate": "Sun, 10 May 2026 12:04:39 GMT",
-    "source": "Bloomberg Technology"
-  },
-  {
-    "title": "I measured 5G signals of AT&T, T-Mobile, and Verizon in a small town - here's what the data says",
-    "link": "https://www.zdnet.com/article/5g-in-rural-america-google-pixel/",
-    "description": "I've tested 5G in cities and on interstates. Now, I'm going through small towns with three Samsung phones in hand.",
-    "pubDate": "Sun, 10 May 2026 11:01:55 GMT",
+    "title": "I'm a lawn expert, and here's my favorite trick for finding your perfect robot mower",
+    "link": "https://www.zdnet.com/article/robot-mower-buying-guide-features-to-ignore-2026/",
+    "description": "Robot mowers aren't one-size-fits-all devices - many have overhyped specs you don't even need. Here are the mower features you can safely skip.",
+    "pubDate": "Tue, 12 May 2026 18:00:35 GMT",
     "source": "ZDNet"
   },
   {
-    "title": "How I customized my Sonos speaker to make my home theater sound truly immersive",
-    "link": "https://www.zdnet.com/article/how-i-customized-my-sonos-speaker-for-better-audio/",
-    "description": "If you've left your Sonos system's audio settings untouched, you're missing out. Here's what you need to know about them.",
-    "pubDate": "Sun, 10 May 2026 11:01:41 GMT",
-    "source": "ZDNet"
+    "title": "Anthropic warns investors against secondary platforms offering access to its shares",
+    "link": "https://techcrunch.com/2026/05/12/anthropic-warns-investors-against-secondary-platforms-offering-access-to-its-shares/",
+    "description": "\"Any sale or transfer of Anthropic stock, or any interest in Anthropic stock, offered by these firms is void and will not be recognized on our books and records,\" the company's support page reads.",
+    "pubDate": "Tue, 12 May 2026 17:36:34 +0000",
+    "source": "TechCrunch"
   },
   {
-    "title": "Could Contact-Tracing Apps Help With the Hantavirus? Not Really",
-    "link": "https://www.wired.com/story/could-contact-tracing-apps-help-with-the-hantavirus-not-really/",
-    "description": "Contact-tracing apps were widely deployed during the Covid pandemic. They aren’t as helpful during smaller outbreaks.",
-    "pubDate": "Sun, 10 May 2026 11:00:00 +0000",
-    "source": "WIRED"
-  },
-  {
-    "title": "Do City Delivery Drones Make Sense? No One Knows, but They're Flying Over NYC",
-    "link": "https://www.wired.com/story/do-city-delivery-drones-make-sense-no-one-knows-but-theyre-flying-over-nyc/",
-    "description": "One of the country’s busiest airspaces has a new kind of flying machine—maybe temporarily.",
-    "pubDate": "Sun, 10 May 2026 10:30:00 +0000",
-    "source": "WIRED"
-  },
-  {
-    "title": "I use these 10 secret Netflix codes to find hidden movies - here's how to enter them",
-    "link": "https://www.zdnet.com/article/netflix-codes-how-to-find-hidden-movies-free/",
-    "description": "Netflix codes let you access movies in buried genres and micro-categories - for free. Here's how, plus my favorites.",
-    "pubDate": "Sun, 10 May 2026 10:00:39 GMT",
-    "source": "ZDNet"
-  },
-  {
-    "title": "How Handheld Translators Work and Why They’re Handy for Travel",
-    "link": "https://www.wired.com/story/why-you-need-a-handheld-translator-for-travel/",
-    "description": "Your cell phone can handle basic language translation, but bespoke tools can offer a much more immersive experience.",
-    "pubDate": "Sun, 10 May 2026 10:00:00 +0000",
-    "source": "WIRED"
-  },
-  {
-    "title": "‘Reservation Hijacking’ Scams Target Travelers. Here’s How to Stay Safe",
-    "link": "https://www.wired.com/story/reservation-hijacks-scam-safety-tips/",
-    "description": "The hotel staffer who calls you with an urgent request for payment isn’t necessarily who they say they are.",
-    "pubDate": "Sun, 10 May 2026 09:30:00 +0000",
-    "source": "WIRED"
-  },
-  {
-    "title": "HP stuffed a PC into a keyboard. We took it for a spin",
-    "link": "https://www.theregister.com/personal-tech/2026/05/10/hp-eliteboard-g1a-puts-a-pc-inside-a-keyboard/5235258",
-    "description": "The early history of personal computers is stacked with systems such as the Apple II and the Commodore 64 that had the components living inside a keyboard. But as technology evolved, the keyboard became a peripheral and the PC itself was either in a separate box or the whole system was a laptop.",
-    "pubDate": "Sun, 10 May 2026 11:30:00 +0200",
-    "source": "The Register"
-  },
-  {
-    "title": "The best Sony TVs of 2026: Expert tested and reviewed",
-    "link": "https://www.zdnet.com/article/best-sony-tv/",
-    "description": "Sony is one of the top names in high-end TVs, and we've tested LED and OLED options to help you find the best fit for your space.",
-    "pubDate": "Sun, 10 May 2026 09:01:05 GMT",
-    "source": "ZDNet"
-  },
-  {
-    "title": "Yes, you can get Microsoft 365 free - here's how",
-    "link": "https://www.zdnet.com/article/how-to-get-microsoft-365-free/",
-    "description": "The former Microsoft Office suite (including Word, Excel, and PowerPoint) now requires a subscription - but there are easy ways to get it free.",
-    "pubDate": "Sun, 10 May 2026 08:00:36 GMT",
-    "source": "ZDNet"
-  },
-  {
-    "title": "Google tweaks Chrome AI privacy wording, insists processing stays on-device",
-    "link": "https://www.theregister.com/ai-and-ml/2026/05/09/google-tweaks-chrome-ai-privacy-wording-insists-processing-stays-on-device/5237580",
-    "description": "Google has changed Chrome's disclosure language about how its on-device AI works, but that doesn't mean the company intends to capture on-device AI interactions. The Chrome menu modification, which isn't universally rolled out yet even in Chrome 148, was noted this week on Reddit.",
-    "pubDate": "Sat, 09 May 2026 19:57:11 +0200",
+    "title": "US Army goes green-ish, wants soldiers munching on plant proteins",
+    "link": "https://www.theregister.com/offbeat/2026/05/12/us-army-eyes-alternative-proteins-for-soldiers-in-the-field/5238969",
+    "description": "Eating in the field has never been fun for US Army soldiers. And they may soon face even stranger field rations than they do today: Alternative proteins delivered in formats ranging from powders and sauces to gels and semi-solids.",
+    "pubDate": "Tue, 12 May 2026 19:03:22 +0200",
     "source": "The Register"
   }
 ];
-export const TECH_NEWS_GENERATED_AT = "2026-05-11T00:28:29.460Z";
+export const TECH_NEWS_GENERATED_AT = "2026-05-13T00:47:21.780Z";
 export const TECH_NEWS_SOURCES_OK = 9;
 export const TECH_NEWS_SOURCES_TOTAL = 9;
