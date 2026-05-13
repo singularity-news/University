@@ -1,6 +1,8 @@
 import { useEffect, ReactNode } from "react";
 import { Nav } from "@/components/site/Nav";
 import { Footer } from "@/components/site/Footer";
+import { ShareButtons } from "@/components/site/ShareButtons";
+import { BackToTop } from "@/components/site/BackToTop";
 
 const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "")
   || (typeof window !== "undefined" ? window.location.origin : "");
