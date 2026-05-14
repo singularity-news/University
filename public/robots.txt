@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: /sitemap.xml
+Sitemap: https://singularity-news.github.io/kdk-university/sitemap.xml
+Sitemap: https://singularity-news.github.io/kdk-university/sitemap-static.xml
+Sitemap: https://singularity-news.github.io/kdk-university/sitemap-news.xml
