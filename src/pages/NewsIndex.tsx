@@ -50,7 +50,7 @@ const NewsIndex = () => {
   useEffect(() => {
     const SITE_URL = (import.meta.env.VITE_SITE_URL as string | undefined)?.replace(/\/$/, "")
       || (typeof window !== "undefined" ? window.location.origin : "");
-    const ogImage = `${SITE_URL}/og-image.png`;
+    const ogImage = `${SITE_URL}/og-pic.png`;
     document.title = TITLE;
     setMeta('meta[name="description"]', "content", DESCRIPTION);
     setMeta('meta[property="og:title"]', "content", TITLE);

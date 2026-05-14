@@ -1,6 +1,13 @@
 export const Hero = () => {
   return (
     <section id="top" className="relative min-h-screen flex items-center overflow-hidden">
+      {/* Brand fallback hero image — also used as the social sharing card */}
+      <img
+        src={`${import.meta.env.BASE_URL}og-pic.png`}
+        alt=""
+        aria-hidden="true"
+        className="absolute inset-0 h-full w-full object-cover opacity-30 pointer-events-none select-none"
+      />
       <div className="absolute inset-0 grid-bg opacity-40" />
       <div className="absolute inset-0 bg-[var(--gradient-hero)]" />
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 h-[600px] w-[600px] rounded-full bg-primary/10 blur-3xl pulse-glow" />

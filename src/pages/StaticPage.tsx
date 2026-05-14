@@ -30,7 +30,7 @@ interface Props {
 export const StaticPage = ({ title, description, path, eyebrow, heading, children }: Props) => {
   useEffect(() => {
     const absoluteUrl = `${SITE_URL}${path}`;
-    const ogImage = `${SITE_URL}/og-image.png`;
+    const ogImage = `${SITE_URL}/og-pic.png`;
     document.title = title;
     setMeta('meta[name="description"]', "content", description);
     setMeta('meta[property="og:title"]', "content", title);
