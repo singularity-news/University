@@ -58,11 +58,14 @@ export const Nav = () => {
       } ${hidden && !open ? "-translate-y-full" : "translate-y-0"}`}
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
-        <Link to="/" className="flex items-center gap-3 group">
-          <div className="relative h-9 w-9 rounded-md border border-primary/40 grid place-items-center overflow-hidden">
-            <div className="absolute inset-0 bg-gradient-to-br from-primary/30 to-accent/20" />
-            <span className="relative font-bold text-sm tracking-wider text-foreground">SU</span>
-          </div>
+        <Link to="/" className="flex items-center gap-3 group" aria-label="Singularity University — Home">
+          <img
+            src={`${import.meta.env.BASE_URL}logo.png`}
+            alt="Singularity University logo"
+            width={40}
+            height={40}
+            className="h-10 w-10 object-contain drop-shadow-[0_0_18px_hsl(var(--primary)/0.35)] transition-transform group-hover:scale-105"
+          />
           <div className="leading-tight">
             <div className="text-sm md:text-base font-semibold tracking-tight">Singularity University</div>
             <div className="text-[10px] md:text-xs text-muted-foreground tracking-[0.18em] uppercase">KdK Krzb.</div>
