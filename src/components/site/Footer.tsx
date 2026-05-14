@@ -72,7 +72,6 @@ export const Footer = () => (
 
       <div className="border-t border-border/60 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-muted-foreground">
         <div>© {new Date().getFullYear()} Singularity University · KdK Krzb. All rights reserved.</div>
-        <div className="tracking-[0.2em] uppercase">Public landing · Conceptual prototype</div>
       </div>
     </div>
   </footer>
