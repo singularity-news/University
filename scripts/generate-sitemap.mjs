@@ -1,5 +1,8 @@
-// Generates dist/sitemap.xml, dist/robots.txt and dist/rss.xml at build time
-// using absolute URLs so search engines and feed readers resolve them correctly.
+// Generates dist/sitemap.xml (a sitemap index) plus per-section
+// sitemaps (sitemap-static.xml, sitemap-news.xml), dist/robots.txt
+// and dist/rss.xml at build time using absolute URLs so search
+// engines and feed readers resolve them correctly on both
+// GitHub Pages and Cloudflare Pages.
 import { writeFileSync, mkdirSync, existsSync, readFileSync } from "node:fs";
 import { resolve } from "node:path";
 
@@ -9,40 +12,59 @@ const nowRfc822 = new Date().toUTCString();
 
 const articles = JSON.parse(readFileSync(resolve("src/data/articles.json"), "utf8"));
 
-const routes = [
+const staticRoutes = [
   { loc: "/", priority: "1.0", changefreq: "weekly" },
   { loc: "/juridical-singularity.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/electric-technocracy.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/research.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/news.html", priority: "0.9", changefreq: "daily" },
-  ...articles.map((a) => ({
-    loc: `/news/${a.slug}.html`,
-    priority: "0.8",
-    changefreq: "monthly",
-    lastmod: a.date,
-  })),
 ];
+
+const newsRoutes = articles.map((a) => ({
+  loc: `/news/${a.slug}.html`,
+  priority: "0.8",
+  changefreq: "monthly",
+  lastmod: a.date,
+}));
 
 const dist = resolve("dist");
 if (!existsSync(dist)) mkdirSync(dist, { recursive: true });
 
-const urls = routes
-  .map(
-    (r) => `  <url>
+const buildUrlset = (routes) => {
+  const urls = routes
+    .map(
+      (r) => `  <url>
     <loc>${SITE_URL}${r.loc}</loc>
     <lastmod>${r.lastmod || today}</lastmod>
     <changefreq>${r.changefreq}</changefreq>
     <priority>${r.priority}</priority>
   </url>`,
-  )
-  .join("\n");
-
-writeFileSync(
-  resolve(dist, "sitemap.xml"),
-  `<?xml version="1.0" encoding="UTF-8"?>
+    )
+    .join("\n");
+  return `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls}
 </urlset>
+`;
+};
+
+writeFileSync(resolve(dist, "sitemap-static.xml"), buildUrlset(staticRoutes));
+writeFileSync(resolve(dist, "sitemap-news.xml"), buildUrlset(newsRoutes));
+
+// Sitemap INDEX — points to each per-section sitemap with absolute URLs
+writeFileSync(
+  resolve(dist, "sitemap.xml"),
+  `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${SITE_URL}/sitemap-static.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${SITE_URL}/sitemap-news.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+</sitemapindex>
 `,
 );
 
@@ -52,6 +74,8 @@ writeFileSync(
 Allow: /
 
 Sitemap: ${SITE_URL}/sitemap.xml
+Sitemap: ${SITE_URL}/sitemap-static.xml
+Sitemap: ${SITE_URL}/sitemap-news.xml
 `,
 );
 
@@ -107,5 +131,5 @@ ${rssItems}
 );
 
 console.log(
-  `✓ sitemap.xml (${routes.length} urls), robots.txt and rss.xml (${articles.length} items) generated for ${SITE_URL}`,
+  `✓ sitemap index + ${staticRoutes.length} static + ${newsRoutes.length} news urls, robots.txt and rss.xml (${articles.length} items) generated for ${SITE_URL}`,
 );
