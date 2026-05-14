@@ -35,7 +35,7 @@ const NewsArticle = () => {
 
     setMeta('meta[name="description"]', "content", article.excerpt);
 
-    const ogImage = `${SITE_URL}/og-image.png`;
+    const ogImage = `${SITE_URL}/og-pic.png`;
 
     // OpenGraph
     setMeta('meta[property="og:title"]', "content", article.title);
@@ -71,12 +71,19 @@ const NewsArticle = () => {
       "@type": "NewsArticle",
       headline: article.title,
       description: article.excerpt,
+      image: [ogImage],
       datePublished: article.date,
+      dateModified: article.date,
       author: { "@type": "Organization", name: `Singularity University — ${article.author}` },
-      publisher: { "@type": "Organization", name: "Singularity University KdK Krzb." },
-      mainEntityOfPage: absoluteUrl,
+      publisher: {
+        "@type": "Organization",
+        name: "Singularity University KdK Krzb.",
+        logo: { "@type": "ImageObject", url: `${SITE_URL}/logo.png` },
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": absoluteUrl },
       url: absoluteUrl,
       articleSection: article.category,
+      inLanguage: "en",
     });
     document.head.appendChild(ld);
     return () => {
