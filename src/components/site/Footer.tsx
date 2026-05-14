@@ -18,9 +18,13 @@ export const Footer = () => (
       <div className="grid md:grid-cols-4 gap-10 mb-14">
         <div className="md:col-span-1">
           <div className="flex items-center gap-3 mb-4">
-            <div className="h-9 w-9 rounded-md border border-primary/40 grid place-items-center bg-gradient-to-br from-primary/20 to-accent/10">
-              <span className="text-sm font-bold">SU</span>
-            </div>
+            <img
+              src={`${import.meta.env.BASE_URL}logo.png`}
+              alt="Singularity University logo"
+              width={36}
+              height={36}
+              className="h-9 w-9 object-contain"
+            />
             <div>
               <div className="text-sm font-semibold">Singularity University</div>
               <div className="text-[10px] tracking-[0.2em] uppercase text-muted-foreground">KdK Krzb.</div>
