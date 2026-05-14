@@ -1,0 +1,74 @@
+<!--
+  template.html
+  This file is a REFERENCE ONLY.
+  The actual HTML generation is done by build.py using Python string templates.
+  It is NOT used directly by the GitHub Actions workflow.
+
+  Placeholders used by build.py:
+    {title_esc}   - HTML-escaped article title
+    {safe}        - URL-safe filename (without .html)
+    {desc_esc}    - HTML-escaped description (first 300 chars of article plaintext)
+    {html_body}   - Full rendered HTML from MediaWiki API (action=parse)
+    {page_url}    - Full canonical URL of this page
+    {wiki_url}    - URL to original MediaWiki article
+    {schema}      - JSON-LD Schema.org Article object
+-->
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="google-site-verification" content="D-u4byZG_DrIUxnTLQdS0BOTjJcwWmm_h-HwUXl8HO4">
+<title>{title_esc} &mdash; Singularity University Wiki</title>
+<meta name="description" content="{desc_esc}">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="{page_url}">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta property="og:type" content="article">
+<meta property="og:title" content="{title_esc} &mdash; Singularity University Wiki">
+<meta property="og:description" content="{desc_esc}">
+<meta property="og:image" content="https://raw.githubusercontent.com/singularity-news/wiki/57d6999f3aa1e574cc45619c5ec7b52592d42e61/assets/header.png">
+<meta property="og:url" content="{page_url}">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{schema}</script>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<!-- [SHARED_HEADER inserted by build.py] -->
+
+<div class="page-wrap">
+
+  <nav class="breadcrumbs" id="breadcrumbs" aria-label="Page path"></nav>
+
+  <div class="content-wrap">
+
+    <aside class="toc-col" aria-label="Table of contents">
+      <div class="toc-box">
+        <div class="toc-title">Contents</div>
+        <ul id="toc" role="list"></ul>
+      </div>
+    </aside>
+
+    <main class="article-col" id="main-content">
+      <div class="article-box">
+        <h1>{title_esc}</h1>
+        <div class="article-meta">
+          <span>Source: <a href="{wiki_url}" target="_blank" rel="noopener">MediaWiki</a></span>
+        </div>
+        {html_body}
+      </div>
+    </main>
+
+  </div>
+
+  <!-- [SHARED_FOOTER inserted by build.py] -->
+
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
