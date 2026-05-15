@@ -234,6 +234,6 @@ export const TECH_NEWS: TechNewsItem[] = [
     "source": "WIRED"
   }
 ];
-export const TECH_NEWS_GENERATED_AT = "2026-05-15T01:49:34.983Z";
+export const TECH_NEWS_GENERATED_AT = "2026-05-15T01:49:53.207Z";
 export const TECH_NEWS_SOURCES_OK = 9;
 export const TECH_NEWS_SOURCES_TOTAL = 9;
