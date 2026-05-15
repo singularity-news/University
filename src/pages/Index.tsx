@@ -1,4 +1,5 @@
 import { Nav } from "@/components/site/Nav";
+import { Welcome } from "@/components/site/Welcome";
 import { Hero } from "@/components/site/Hero";
 import { Introduction } from "@/components/site/Introduction";
 import { Juridical } from "@/components/site/Juridical";
