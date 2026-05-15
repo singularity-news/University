@@ -138,6 +138,57 @@ for (const a of articles) {
 // confirm the og-pic image is actually shipped to dist so absolute image URL resolves
 const ogImageDist = resolve(dist, "og-pic.png");
 must(existsSync(ogImageDist) && statSync(ogImageDist).size > 1000, "dist/og-pic.png exists for absolute JSON-LD image URL");
+const logoDist = resolve(dist, "logo.png");
+must(existsSync(logoDist) && statSync(logoDist).size > 500, "dist/logo.png exists for Organization JSON-LD logo");
+
+// ---------- 8. Structured-data parse + Organization/WebSite consistency ----------
+// Parse every <script type="application/ld+json"> in dist/index.html. Fail
+// the build if any block is malformed or missing required schema fields —
+// this is the CI guard against broken Rich Results / structured data.
+const ldRegex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/g;
+const ldBlocks = [...indexHtml.matchAll(ldRegex)].map((m) => m[1].trim());
+must(ldBlocks.length >= 1, `index.html ships ${ldBlocks.length} JSON-LD block(s) (>=1)`);
+
+const parsedLd = [];
+for (const [i, raw] of ldBlocks.entries()) {
+  try {
+    const obj = JSON.parse(raw);
+    parsedLd.push(obj);
+    ok.push(`index JSON-LD block #${i + 1} parses (@type=${obj["@type"] || "?"})`);
+  } catch (e) {
+    errors.push(`index JSON-LD block #${i + 1} is malformed: ${e.message}`);
+  }
+}
+
+const org = parsedLd.find((o) => o && o["@type"] === "Organization");
+must(!!org, "index.html includes Organization JSON-LD");
+if (org) {
+  must(typeof org.name === "string" && org.name.length > 0, "Organization.name present");
+  must(typeof org.url === "string" && isAbsoluteOnSite(org.url.replace(/\/$/, "")), `Organization.url absolute on SITE_URL: ${org.url}`);
+  must(typeof org.logo === "string" && isAbsoluteOnSite(org.logo), `Organization.logo absolute on SITE_URL: ${org.logo}`);
+  must(org.logo && org.logo.endsWith("/logo.png"), `Organization.logo points to /logo.png (got ${org.logo})`);
+}
+
+const website = parsedLd.find((o) => o && o["@type"] === "WebSite");
+if (website) {
+  must(typeof website.url === "string" && isAbsoluteOnSite(website.url.replace(/\/$/, "")), `WebSite.url absolute on SITE_URL: ${website.url}`);
+  const pubLogo = website.publisher && website.publisher.logo && (website.publisher.logo.url || website.publisher.logo);
+  must(typeof pubLogo === "string" && pubLogo === (org && org.logo), `WebSite.publisher.logo matches Organization.logo`);
+  must(website.publisher && website.publisher.name === (org && org.name), `WebSite.publisher.name matches Organization.name`);
+}
+
+// ---------- 9. NewsArticle JSON-LD must reference the same Organization ----------
+// Source-level consistency check: NewsArticle.tsx publisher.name + logo.url
+// must match the Organization block we just validated in index.html.
+if (org) {
+  const pubNameMatch = newsArticleSrc.match(/publisher:\s*\{[^}]*name:\s*"([^"]+)"/);
+  must(!!pubNameMatch, "NewsArticle.tsx JSON-LD publisher.name parsed");
+  if (pubNameMatch) {
+    must(pubNameMatch[1] === org.name, `NewsArticle publisher.name === Organization.name (${pubNameMatch[1]} vs ${org.name})`);
+  }
+  must(/logo:\s*\{[^}]*url:\s*`\$\{SITE_URL\}\/logo\.png`/.test(newsArticleSrc),
+    "NewsArticle.tsx JSON-LD publisher.logo.url uses absolute ${SITE_URL}/logo.png");
+}
 
 // ---------- report ----------
 console.log("\n=== Build validation ===");

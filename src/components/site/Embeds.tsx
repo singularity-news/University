@@ -1,6 +1,26 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { RefreshCw, Play, ExternalLink } from "lucide-react";
 import { SectionHeader } from "./SectionHeader";
+
+// Persist the user's "Load embed" opt-in across visits so heavy third-party
+// iframes don't require a second click on subsequent page loads.
+const LS_PREFIX = "embed:loaded:";
+const wasLoaded = (src: string) => {
+  if (typeof window === "undefined") return false;
+  try {
+    return window.localStorage.getItem(LS_PREFIX + src) === "1";
+  } catch {
+    return false;
+  }
+};
+const rememberLoaded = (src: string) => {
+  if (typeof window === "undefined") return;
+  try {
+    window.localStorage.setItem(LS_PREFIX + src, "1");
+  } catch {
+    /* storage disabled — silently ignore */
+  }
+};
 
 // Cross-origin iframes can't be restyled from the parent. We control the
 // surrounding wrapper so it always matches the dark-blue site theme with
@@ -33,7 +53,13 @@ const Frame = ({
   // bumping this nonce forces the <iframe> to remount on retry
   const [nonce, setNonce] = useState(0);
 
+  // Auto-load if the user already opted in for this src on a previous visit.
+  useEffect(() => {
+    if (state === "idle" && wasLoaded(src)) setState("loading");
+  }, [src, state]);
+
   const start = () => {
+    rememberLoaded(src);
     setState("loading");
     setNonce((n) => n + 1);
   };
@@ -120,7 +146,10 @@ const Frame = ({
           title={title}
           height={height}
           loading="lazy"
-          onLoad={() => setState("ready")}
+          onLoad={() => {
+            rememberLoaded(src);
+            setState("ready");
+          }}
           onError={() => setState("error")}
           className="w-full block bg-background"
           style={{
