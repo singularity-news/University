@@ -1,0 +1,6 @@
+Date Built: 2026-05-16T00:59:04.931Z
+    
+VERCEL_GIT_COMMIT_SHA: 3085e73988e83e179e5561370a8b96024fef30d4
+VERCEL_GIT_COMMIT_MESSAGE: Merge pull request #3846 from MindsmithAI/bake-sandbox-snapshot-command
+
+fix: fix command to bake snapshot
