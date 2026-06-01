@@ -11,6 +11,7 @@ import NewsArticle from "./pages/NewsArticle.tsx";
 import JuridicalSingularity from "./pages/JuridicalSingularity.tsx";
 import ElectricTechnocracy from "./pages/ElectricTechnocracy.tsx";
 import ResearchPage from "./pages/ResearchPage.tsx";
+import Courses from "./pages/Courses.tsx";
 
 const queryClient = new QueryClient();
 
@@ -28,6 +29,8 @@ const App = () => (
           <Route path="/electric-technocracy" element={<ElectricTechnocracy />} />
           <Route path="/research.html" element={<ResearchPage />} />
           <Route path="/research" element={<ResearchPage />} />
+          <Route path="/courses.html" element={<Courses />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="/news.html" element={<NewsIndex />} />
           <Route path="/news" element={<NewsIndex />} />
           <Route path="/news/post-westphalian-order.html" element={<PostWestphalianOrder />} />
