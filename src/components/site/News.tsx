@@ -22,8 +22,14 @@ export const News = () => {
               className="card-hover group rounded-xl border border-border bg-card/50 backdrop-blur overflow-hidden flex flex-col"
             >
               <div className="aspect-[16/9] relative overflow-hidden bg-secondary">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/30 via-steel to-accent/20" />
-                <div className="absolute inset-0 grid-bg opacity-40" />
+                <img
+                  src={`${import.meta.env.BASE_URL}news-cover.png`}
+                  alt=""
+                  aria-hidden="true"
+                  loading="lazy"
+                  className="absolute inset-0 h-full w-full object-cover opacity-90 transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-background/10 to-transparent" />
                 <div className="absolute bottom-3 left-3 text-[10px] tracking-[0.2em] uppercase px-2.5 py-1 rounded-full bg-background/70 border border-border backdrop-blur text-accent">
                   {a.category}
                 </div>

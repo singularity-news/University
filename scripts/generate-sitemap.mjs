@@ -17,6 +17,7 @@ const staticRoutes = [
   { loc: "/juridical-singularity.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/electric-technocracy.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/research.html", priority: "0.9", changefreq: "monthly" },
+  { loc: "/courses.html", priority: "0.9", changefreq: "monthly" },
   { loc: "/news.html", priority: "0.9", changefreq: "daily" },
 ];
 

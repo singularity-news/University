@@ -80,6 +80,32 @@ must(/<div id="root">/.test(indexHtml), "index.html has #root mount point");
 must(/rss\.xml/.test(indexHtml), "index.html links to rss.xml");
 must(/og-pic\.png/.test(indexHtml), "index.html uses og-pic.png as social image");
 
+// ---------- 5b. index.html OG/Twitter Card tags MUST be absolute ----------
+const requiredIndexAbsoluteMetas = [
+  { re: /<meta[^>]+property=["']og:url["'][^>]+content=["']([^"']+)["']/, name: "og:url" },
+  { re: /<meta[^>]+property=["']og:image["'][^>]+content=["']([^"']+)["']/, name: "og:image" },
+  { re: /<meta[^>]+name=["']twitter:image["'][^>]+content=["']([^"']+)["']/, name: "twitter:image" },
+];
+for (const { re, name } of requiredIndexAbsoluteMetas) {
+  const m = indexHtml.match(re);
+  must(!!m, `index.html ships ${name}`);
+  if (m) must(isAbsoluteOnSite(m[1].replace(/\/$/, "")), `index.html ${name} is absolute on SITE_URL: ${m[1]}`);
+}
+const requiredIndexCardTags = [
+  /<meta[^>]+property=["']og:title["']/,
+  /<meta[^>]+property=["']og:description["']/,
+  /<meta[^>]+property=["']og:type["']/,
+  /<meta[^>]+name=["']twitter:card["'][^>]+content=["']summary_large_image["']/,
+  /<meta[^>]+name=["']twitter:title["']/,
+  /<meta[^>]+name=["']twitter:description["']/,
+];
+for (const re of requiredIndexCardTags) {
+  must(re.test(indexHtml), `index.html has ${re.source}`);
+}
+const canonicalMatch = indexHtml.match(/<link[^>]+rel=["']canonical["'][^>]+href=["']([^"']+)["']/);
+must(!!canonicalMatch, "index.html has canonical link");
+if (canonicalMatch) must(isAbsoluteOnSite(canonicalMatch[1].replace(/\/$/, "")), `index.html canonical is absolute: ${canonicalMatch[1]}`);
+
 // every script/css href in index.html should resolve under base path
 const expectedBase = base; // "/" or "/kdk-university/"
 const assetRefs = [...indexHtml.matchAll(/(?:src|href)="([^"]+)"/g)].map((m) => m[1]);
@@ -92,6 +118,7 @@ const pagesToCheck = [
   "src/pages/NewsArticle.tsx",
   "src/pages/StaticPage.tsx",
   "src/pages/NewsIndex.tsx",
+  "src/pages/Courses.tsx",
 ];
 const requiredMeta = [
   'meta[property="og:title"]',

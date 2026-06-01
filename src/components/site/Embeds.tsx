@@ -188,7 +188,11 @@ export const Embeds = () => (
             title="Editorial & Research Feed"
             description="Curated global publications on AI law, governance and infrastructure sovereignty."
           />
-          <Frame src="https://rss.app/embed/v1/list/4CuB6torzVbnQAzt" title="RSS feed I" height={1600} />
+          <Frame
+            src="https://widgets.sociablekit.com/rss-feed/iframe/25686177"
+            title="RSS feed I"
+            height={550}
+          />
         </div>
 
         <div>
@@ -197,7 +201,11 @@ export const Embeds = () => (
             title="Technology & Policy Feed"
             description="Cross-syndicated dispatches from leading technology and policy publications."
           />
-          <Frame src="https://rss.app/embed/v1/list/tZA7cHwU1KSA9pah" title="RSS feed II" height={1600} />
+          <Frame
+            src="https://widgets.sociablekit.com/rss-feed/iframe/25686179"
+            title="RSS feed II"
+            height={550}
+          />
         </div>
       </div>
 

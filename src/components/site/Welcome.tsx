@@ -1,5 +1,5 @@
 export const Welcome = () => (
-  <section id="welcome" className="relative section-pad pt-32 md:pt-40 border-b border-border/40">
+  <section id="welcome" className="relative section-pad border-b border-border/40">
     <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
     <div className="absolute inset-0 bg-[var(--gradient-hero)] opacity-60 pointer-events-none" />
     <div className="container relative z-10 max-w-4xl">

@@ -7,6 +7,7 @@ const links = [
   { href: "/juridical-singularity.html", label: "Juridical Singularity", route: true },
   { href: "/electric-technocracy.html", label: "Electric Technocracy", route: true },
   { href: "/research.html", label: "Research", route: true },
+  { href: "/courses.html", label: "Courses", route: true },
   { href: "/news.html", label: "News", route: true },
 ];
 
