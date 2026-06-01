@@ -118,6 +118,7 @@ const pagesToCheck = [
   "src/pages/NewsArticle.tsx",
   "src/pages/StaticPage.tsx",
   "src/pages/NewsIndex.tsx",
+  "src/pages/Courses.tsx",
 ];
 const requiredMeta = [
   'meta[property="og:title"]',
